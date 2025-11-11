@@ -1,0 +1,94 @@
+{
+  "Btech": {
+    "branches": {
+      "All": {
+        "semesters": {
+          "1": [
+            {
+              "Day": "Monday",
+              "Date": "20-11-2023",
+              "Subject Name": "Engg. Physics",
+              "Code": "BTAS101",
+              "Timing": "01:30 PM - 4:30 PM",
+              "Shift": "E"
+            },
+            {
+              "Day": "Tuesday",
+              "Date": "21-11-2023",
+              "Subject Name": "Engineering Mathematics-1",
+              "Code": "BTAS103",
+              "Timing": "01:30 PM - 4:30 PM",
+              "Shift": "E"
+            }
+          ],
+          "3": [
+            {
+              "Day": "Tuesday",
+              "Date": "21-11-2023",
+              "Subject Name": "Technical Communication",
+              "Code": "BTAS301",
+              "Timing": "01:30 PM - 4:30 PM",
+              "Shift": "E"
+            }
+          ]
+        }
+      },
+      "CE": {
+        "semesters": {
+          "3": [
+            {
+              "Day": "Monday",
+              "Date": "20-11-2023",
+              "Subject Name": "Mathematics-III",
+              "Code": "BTAS303",
+              "Timing": "01:30 PM - 4:30 PM",
+              "Shift": "E"
+            }
+          ]
+        }
+      },
+      "CS": {
+        "semesters": {
+          "3": [
+            {
+              "Day": "Thursday",
+              "Date": "23-11-2023",
+              "Subject Name": "Data Structure",
+              "Code": "BTCS301",
+              "Timing": "01:30 PM - 4:30 PM",
+              "Shift": "E"
+            }
+          ]
+        }
+      },
+      "EE": {
+        "semesters": {
+          "3": [
+            {
+              "Day": "Thursday",
+              "Date": "23-11-2023",
+              "Subject Name": "Electromagnetic Field Theory",
+              "Code": "BTEE301",
+              "Timing": "01:30 PM - 4:30 PM",
+              "Shift": "E"
+            }
+          ]
+        }
+      },
+      "ME": {
+        "semesters": {
+          "3": [
+            {
+              "Day": "Thursday",
+              "Date": "23-11-2023",
+              "Subject Name": "Thermodynamics",
+              "Code": "BTME301",
+              "Timing": "01:30 PM - 4:30 PM",
+              "Shift": "E"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

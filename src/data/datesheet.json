@@ -1,0 +1,109 @@
+{
+  "courses": [
+    {
+      "id": "btech",
+      "name": "Bachelor of Technology",
+      "branches": [
+        {
+          "id": "cse",
+          "name": "Computer Science Engineering",
+          "semesters": [
+            {
+              "id": "1",
+              "subjects": [
+                {
+                  "code": "PHY101",
+                  "name": "Engineering Physics"
+                },
+                {
+                  "code": "MTH101",
+                  "name": "Calculus"
+                },
+                {
+                  "code": "CSE101",
+                  "name": "Programming in C"
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "subjects": [
+                {
+                  "code": "CSE201",
+                  "name": "Data Structures"
+                },
+                {
+                  "code": "CSE202",
+                  "name": "Discrete Mathematics"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ece",
+          "name": "Electronics and Communication",
+          "semesters": [
+            {
+              "id": "1",
+              "subjects": [
+                {
+                  "code": "PHY101",
+                  "name": "Engineering Physics"
+                },
+                {
+                  "code": "ECE101",
+                  "name": "Basic Electronics"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bca",
+      "name": "Bachelor of Computer Applications",
+      "branches": [
+        {
+          "id": "core",
+          "name": "Core BCA",
+          "semesters": [
+            {
+              "id": "1",
+              "subjects": [
+                {
+                  "code": "BCA101",
+                  "name": "Computer Fundamentals"
+                },
+                {
+                  "code": "BCA102",
+                  "name": "C Programming"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "core",
+          "name": "Core BCA",
+          "semesters": [
+            {
+              "id": "1",
+              "subjects": [
+                {
+                  "code": "BCA101",
+                  "name": "Computer Fundamentals"
+                },
+                {
+                  "code": "BCA102",
+                  "name": "C Programming"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

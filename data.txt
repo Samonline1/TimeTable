@@ -1,0 +1,618 @@
+{
+    "B.Tech": {
+        "All Branches": {
+            "Semester 1": [
+                {
+                    "Day": "Monday",
+                    "Date": "20-11-2023",
+                    "Subject Name": "Engg. Physics",
+                    "Code": "BTAS101",
+                    "Timing": "01:30 PM - 4:30 PM",
+                    "Shift": "E"
+                },
+                {
+                    "Day": "Tuesday",
+                    "Date": "21-11-2023",
+                    "Subject Name": "Engineering Mathematics-1",
+                    "Code": "BTAS103",
+                    "Timing": "01:30 PM - 4:30 PM",
+                    "Shift": "E"
+                },
+                {
+                    "Day": "Wednesday",
+                    "Date": "22-11-2023",
+                    "Subject Name": "Basic Electrical Engineering",
+                    "Code": "BTEE101",
+                    "Timing": "01:30 PM - 4:30 PM",
+                    "Shift": "E"
+                },
+                {
+                    "Day": "Thursday",
+                    "Date": "23-11-2023",
+                    "Subject Name": "Programming for Problem Solving",
+                    "Code": "BTCS101",
+                    "Timing": "01:30 PM - 4:30 PM",
+                    "Shift": "E"
+                },
+                {
+                    "Day": "Friday",
+                    "Date": "24-11-2023",
+                    "Subject Name": "Al For Engineering",
+                    "Code": "BTMC101",
+                    "Timing": "01:30 PM - 4:30 PM",
+                    "Shift": "E"
+                },
+                {
+                    "Day": "Saturday",
+                    "Date": "25-11-2023",
+                    "Subject Name": "Soft Skill - 1",
+                    "Code": "BTNC101",
+                    "Timing": "01:30 PM - 4:30 PM",
+                    "Shift": "E"
+                }
+            ],
+            "Semester 3": [
+                {
+                    "Day": "Tuesday",
+                    "Date": "21-11-2023",
+                    "Subject Name": "Technical Communication",
+                    "Code": "BTAS301",
+                    "Timing": "01:30 PM - 4:30 PM",
+                    "Shift": "E"
+                },
+                {
+                    "Day": "Wednesday",
+                    "Date": "22-11-2023",
+                    "Subject Name": "Computer System Security",
+                    "Code": "BTNC301",
+                    "Timing": "01:30 PM - 4:30 PM",
+                    "Shift": "E"
+                }
+            ],
+            "Semester 5": [
+                {
+                    "Day": "Monday",
+                    "Date": "20-11-2023",
+                    "Subject Name": "Constitution of India, Law and Engineering",
+                    "Code": "BTNC501",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                }
+            ],
+            "Semester 7": [
+                {
+                    "Day": "Monday",
+                    "Date": "20-11-2023",
+                    "Subject Name": "Quality management",
+                    "Code": "BTOE-71",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                }
+            ]
+        },
+        "CE": {
+            "Semester 3": [
+                {
+                    "Day": "Monday",
+                    "Date": "20-11-2023",
+                    "Subject Name": "Mathematics-III",
+                    "Code": "BTAS303",
+                    "Timing": "01:30 PM - 4:30 PM",
+                    "Shift": "E"
+                },
+                {
+                    "Day": "Thursday",
+                    "Date": "23-11-2023",
+                    "Subject Name": "Engg. Mechanics",
+                    "Code": "BTCE301",
+                    "Timing": "01:30 PM - 4:30 PM",
+                    "Shift": "E"
+                },
+                {
+                    "Day": "Friday",
+                    "Date": "24-11-2023",
+                    "Subject Name": "Surveying and Geomatics",
+                    "Code": "BTCE302",
+                    "Timing": "01:30 PM - 4:30 PM",
+                    "Shift": "E"
+                },
+                {
+                    "Day": "Saturday",
+                    "Date": "25-11-2023",
+                    "Subject Name": "Fluid Mechanics",
+                    "Code": "BTCE303",
+                    "Timing": "01:30 PM - 4:30 PM",
+                    "Shift": "E"
+                }
+            ],
+            "Semester 5": [
+                {
+                    "Day": "Tuesday",
+                    "Date": "21-11-2023",
+                    "Subject Name": "Geotechnical Engineering",
+                    "Code": "BTCE501",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Wednesday",
+                    "Date": "22-11-2023",
+                    "Subject Name": "Structural Analysis",
+                    "Code": "BTCE502",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Thursday",
+                    "Date": "23-11-2023",
+                    "Subject Name": "Quantity Estimation and Construction Management",
+                    "Code": "BTCE503",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Friday",
+                    "Date": "24-11-2023",
+                    "Subject Name": "Concrete Technology",
+                    "Code": "BTCE051",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Saturday",
+                    "Date": "25-11-2023",
+                    "Subject Name": "Engineering Hydrology",
+                    "Code": "BTCE055",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                }
+            ],
+            "Semester 7": [
+                {
+                    "Day": "Tuesday",
+                    "Date": "21-11-2023",
+                    "Subject Name": "Design of Steel Structure",
+                    "Code": "BTCE-71",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Wednesday",
+                    "Date": "22-11-2023",
+                    "Subject Name": "Water Resource Engg.",
+                    "Code": "BTCE-72",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Thursday",
+                    "Date": "23-11-2023",
+                    "Subject Name": "Engineering Hydrology",
+                    "Code": "BTCE-73",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Friday",
+                    "Date": "24-11-2023",
+                    "Subject Name": "Tunnel Engineering",
+                    "Code": "BTCE-74",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                }
+            ]
+        },
+        "CS": {
+            "Semester 3": [
+                {
+                    "Day": "Thursday",
+                    "Date": "23-11-2023",
+                    "Subject Name": "Data Structure",
+                    "Code": "BTCS301",
+                    "Timing": "01:30 PM - 4:30 PM",
+                    "Shift": "E"
+                },
+                {
+                    "Day": "Friday",
+                    "Date": "24-11-2023",
+                    "Subject Name": "Computer Organization and Architecture",
+                    "Code": "BTCS302",
+                    "Timing": "01:30 PM - 4:30 PM",
+                    "Shift": "E"
+                },
+                {
+                    "Day": "Saturday",
+                    "Date": "25-11-2023",
+                    "Subject Name": "Discrete Structures & Theory of Logic",
+                    "Code": "BTCS303",
+                    "Timing": "01:30 PM - 4:30 PM",
+                    "Shift": "E"
+                }
+            ],
+            "Semester 5": [
+                {
+                    "Day": "Tuesday",
+                    "Date": "21-11-2023",
+                    "Subject Name": "Database Management System",
+                    "Code": "BTCS501",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Wednesday",
+                    "Date": "22-11-2023",
+                    "Subject Name": "Compiler Design",
+                    "Code": "BTCS502",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Thursday",
+                    "Date": "23-11-2023",
+                    "Subject Name": "Design and Analysis of Algorithm",
+                    "Code": "BTCS503",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Friday",
+                    "Date": "24-11-2023",
+                    "Subject Name": "Web Designing",
+                    "Code": "BTCS052",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Saturday",
+                    "Date": "25-11-2023",
+                    "Subject Name": "Machine Learning Techniques",
+                    "Code": "BTCS055",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                }
+            ],
+            "Semester 7": [
+                {
+                    "Day": "Tuesday",
+                    "Date": "21-11-2023",
+                    "Subject Name": "Distributed System",
+                    "Code": "BTCS-71",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Wednesday",
+                    "Date": "22-11-2023",
+                    "Subject Name": "Artificial Intelligence",
+                    "Code": "BTCS-72",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Thursday",
+                    "Date": "23-11-2023",
+                    "Subject Name": "Android Operating System",
+                    "Code": "BTCS-73",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Friday",
+                    "Date": "24-11-2023",
+                    "Subject Name": "Cryptography and Network security",
+                    "Code": "BTCS-74",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                }
+            ]
+        },
+        "EC": {
+            "Semester 3": [
+                {
+                    "Day": "Thursday",
+                    "Date": "23-11-2023",
+                    "Subject Name": "Electronic Devices",
+                    "Code": "BTEC301",
+                    "Timing": "01:30 PM - 4:30 PM",
+                    "Shift": "E"
+                },
+                {
+                    "Day": "Friday",
+                    "Date": "24-11-2023",
+                    "Subject Name": "Digital System Design",
+                    "Code": "BTEC302",
+                    "Timing": "01:30 PM - 4:30 PM",
+                    "Shift": "E"
+                }
+            ],
+            "Semester 5": [
+                {
+                    "Day": "Tuesday",
+                    "Date": "21-11-2023",
+                    "Subject Name": "Integrated Circuits",
+                    "Code": "BTEC501",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Wednesday",
+                    "Date": "22-11-2023",
+                    "Subject Name": "Microprocessor & Microcontroller",
+                    "Code": "BTEC502",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Thursday",
+                    "Date": "23-11-2023",
+                    "Subject Name": "Digital Signal Processing",
+                    "Code": "BTEC503",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Friday",
+                    "Date": "24-11-2023",
+                    "Subject Name": "Industrial Electronics",
+                    "Code": "BTEC052",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Saturday",
+                    "Date": "25-11-2023",
+                    "Subject Name": "Optical Communication",
+                    "Code": "BTEC058",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                }
+            ],
+            "Semester 7": [
+                {
+                    "Day": "Tuesday",
+                    "Date": "21-11-2023",
+                    "Subject Name": "Optical Communication",
+                    "Code": "BTEC-71",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Wednesday",
+                    "Date": "22-11-2023",
+                    "Subject Name": "Data Communication N/w",
+                    "Code": "BTEC-72",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Thursday",
+                    "Date": "23-11-2023",
+                    "Subject Name": "VLSI Design",
+                    "Code": "BTEC-73",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Friday",
+                    "Date": "24-11-2023",
+                    "Subject Name": "Information Theory & Coding",
+                    "Code": "BTEC-74",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                }
+            ]
+        },
+        "EE": {
+            "Semester 3": [
+                {
+                    "Day": "Thursday",
+                    "Date": "23-11-2023",
+                    "Subject Name": "Electromagnetic Field Theory",
+                    "Code": "BTEE301",
+                    "Timing": "01:30 PM - 4:30 PM",
+                    "Shift": "E"
+                },
+                {
+                    "Day": "Friday",
+                    "Date": "24-11-2023",
+                    "Subject Name": "Electrical Measurements & Instrumentation",
+                    "Code": "BTEE302",
+                    "Timing": "01:30 PM - 4:30 PM",
+                    "Shift": "E"
+                },
+                {
+                    "Day": "Saturday",
+                    "Date": "25-11-2023",
+                    "Subject Name": "Basic Signals & Systems",
+                    "Code": "BTEE303",
+                    "Timing": "01:30 PM - 4:30 PM",
+                    "Shift": "E"
+                }
+            ],
+            "Semester 5": [
+                {
+                    "Day": "Tuesday",
+                    "Date": "21-11-2023",
+                    "Subject Name": "Power System-1",
+                    "Code": "BTEE501",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Wednesday",
+                    "Date": "22-11-2023",
+                    "Subject Name": "Control System",
+                    "Code": "BTEE502",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Thursday",
+                    "Date": "23-11-2023",
+                    "Subject Name": "Electrical Machines-II",
+                    "Code": "BTEE503",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Friday",
+                    "Date": "24-11-2023",
+                    "Subject Name": "Sensors and Transducers",
+                    "Code": "BTEE052",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Saturday",
+                    "Date": "25-11-2023",
+                    "Subject Name": "Analog & Digital Comm.",
+                    "Code": "BTEE058",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                }
+            ],
+            "Semester 7": [
+                {
+                    "Day": "Wednesday",
+                    "Date": "22-11-2023",
+                    "Subject Name": "Analog & Digital Comm.",
+                    "Code": "BTEE-72",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Thursday",
+                    "Date": "23-11-2023",
+                    "Subject Name": "Power Station Practice",
+                    "Code": "BTEE-73",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Friday",
+                    "Date": "24-11-2023",
+                    "Subject Name": "Power System Operation and Control",
+                    "Code": "BTEE-74",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                }
+            ]
+        },
+        "ME": {
+            "Semester 3": [
+                {
+                    "Day": "Thursday",
+                    "Date": "23-11-2023",
+                    "Subject Name": "Thermodynamics",
+                    "Code": "BTME301",
+                    "Timing": "01:30 PM - 4:30 PM",
+                    "Shift": "E"
+                },
+                {
+                    "Day": "Friday",
+                    "Date": "24-11-2023",
+                    "Subject Name": "Fluid Mechanics & Fluid Machines",
+                    "Code": "BTME302",
+                    "Timing": "01:30 PM - 4:30 PM",
+                    "Shift": "E"
+                },
+                {
+                    "Day": "Saturday",
+                    "Date": "25-11-2023",
+                    "Subject Name": "Materials Engineering",
+                    "Code": "BTME303",
+                    "Timing": "01:30 PM - 4:30 PM",
+                    "Shift": "E"
+                }
+            ],
+            "Semester 5": [
+                {
+                    "Day": "Tuesday",
+                    "Date": "21-11-2023",
+                    "Subject Name": "Heat and Mass Transfer",
+                    "Code": "BTME501",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Wednesday",
+                    "Date": "22-11-2023",
+                    "Subject Name": "Strength of Material",
+                    "Code": "BTME502",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Thursday",
+                    "Date": "23-11-2023",
+                    "Subject Name": "Industrial Engineering",
+                    "Code": "BTME503",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Friday",
+                    "Date": "24-11-2023",
+                    "Subject Name": "Automobile Engines & Combustion",
+                    "Code": "BTAU051",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Saturday",
+                    "Date": "25-11-2023",
+                    "Subject Name": "Advance Welding",
+                    "Code": "BTME055",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                }
+            ],
+            "Semester 7": [
+                {
+                    "Day": "Tuesday",
+                    "Date": "21-11-2023",
+                    "Subject Name": "Computer Aided Design",
+                    "Code": "BTME-71",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Wednesday",
+                    "Date": "22-11-2023",
+                    "Subject Name": "Automobile Engineering",
+                    "Code": "BTME-72",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Thursday",
+                    "Date": "23-11-2023",
+                    "Subject Name": "Computer Aided Manuf.",
+                    "Code": "BTME-73",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                },
+                {
+                    "Day": "Friday",
+                    "Date": "24-11-2023",
+                    "Subject Name": "Mechanical System Design",
+                    "Code": "BTME-74",
+                    "Timing": "09:30 AM - 12:30 PM",
+                    "Shift": "M"
+                }
+            ]
+        },
+        "ME,EE,EC,CS": {
+            "Semester 3": [
+                {
+                    "Day": "Monday",
+                    "Date": "20-11-2023",
+                    "Subject Name": "Mathematics-IV",
+                    "Code": "BTAS302",
+                    "Timing": "01:30 PM - 4:30 PM",
+                    "Shift": "E"
+                }
+            ]
+        }
+    }
+}
