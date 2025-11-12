@@ -13,15 +13,53 @@
               "subjects": [
                 {
                   "code": "PHY101",
-                  "name": "Engineering Physics"
+                  "name": "Engineering Physics",
+                  "Date": "2025-10-20"
                 },
                 {
                   "code": "MTH101",
-                  "name": "Calculus"
+                  "name": "Calculus",
+                  "Date": "2025-11-14"
                 },
                 {
                   "code": "CSE101",
-                  "name": "Programming in C"
+                  "name": "Programming in C",
+                  "Date": "2025-12-25"
+                },
+                {
+                  "code": "PHY101",
+                  "name": "Engineering Physics",
+                  "Date": "2025-11-20"
+                },
+                {
+                  "code": "MTH101",
+                  "name": "Calculus",
+                  "Date": "2025-11-14"
+                },
+                {
+                  "code": "CSE101",
+                  "name": "Programming in C",
+                  "Date": "2025-12-25"
+                },
+                {
+                  "code": "CSE101",
+                  "name": "Programming in C",
+                  "Date": "2025-12-25"
+                },
+                {
+                  "code": "PHY101",
+                  "name": "Engineering Physics",
+                  "Date": "2025-11-20"
+                },
+                {
+                  "code": "MTH101",
+                  "name": "Calculus",
+                  "Date": "2025-11-14"
+                },
+                {
+                  "code": "CSE101",
+                  "name": "Programming in C",
+                  "Date": "2025-12-25"
                 }
               ]
             },
@@ -30,11 +68,13 @@
               "subjects": [
                 {
                   "code": "CSE201",
-                  "name": "Data Structures"
+                  "name": "Data Structures",
+                  "Date": "2025-12-20"
                 },
                 {
                   "code": "CSE202",
-                  "name": "Discrete Mathematics"
+                  "name": "Discrete Mathematics",
+                  "Date": "2025-12-20"
                 }
               ]
             }
@@ -74,11 +114,13 @@
               "subjects": [
                 {
                   "code": "BCA101",
-                  "name": "Computer Fundamentals"
+                  "name": "Computer Fundamentals",
+                  "Date": "2025-10-4"
                 },
                 {
                   "code": "BCA102",
-                  "name": "C Programming"
+                  "name": "C Programming",
+                  "Date": "2025-11-25"
                 }
               ]
             }
@@ -93,11 +135,13 @@
               "subjects": [
                 {
                   "code": "BCA101",
-                  "name": "Computer Fundamentals"
+                  "name": "Computer Fundamentals",
+                  "Date": "2025-11-23"
                 },
                 {
                   "code": "BCA102",
-                  "name": "C Programming"
+                  "name": "C Programming",
+                  "Date": "2025-12-29"
                 }
               ]
             }
