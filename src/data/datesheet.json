@@ -14,52 +14,92 @@
                 {
                   "code": "PHY101",
                   "name": "Engineering Physics",
-                  "Date": "2025-10-20"
+                  "Date": "2025-11-13",
+                  "startTime": "2:30 PM",
+                  "endTime": "5:55 PM",
+                  "shift": "M"
                 },
                 {
                   "code": "MTH101",
                   "name": "Calculus",
-                  "Date": "2025-11-14"
+                  "Date": "2025-11-14",
+                  "startTime": "1:30 PM",
+                  "endTime": "3:30 PM",
+                                    "shift": "E"
+
                 },
                 {
                   "code": "CSE101",
                   "name": "Programming in C",
-                  "Date": "2025-12-25"
+                  "Date": "2025-12-25",
+                  "startTime": "1:30 PM",
+                  "endTime": "3:30 PM",
+                                    "shift": "M"
+
+
                 },
                 {
                   "code": "PHY101",
                   "name": "Engineering Physics",
-                  "Date": "2025-11-20"
+                  "Date": "2025-11-20",
+                  "startTime": "1:30 PM",
+                  "endTime": "3:30 PM",
+                                    "shift": "E"
+
                 },
                 {
                   "code": "MTH101",
                   "name": "Calculus",
-                  "Date": "2025-11-14"
+                  "Date": "2025-11-14",
+                  "startTime": "1:30 PM",
+                  "endTime": "3:30 PM",
+                                    "shift": "M"
+
                 },
                 {
                   "code": "CSE101",
                   "name": "Programming in C",
-                  "Date": "2025-12-25"
+                  "Date": "2025-12-25",
+                  "startTime": "1:30 PM",
+                  "endTime": "3:30 PM",
+                                    "shift": "M"
+
                 },
                 {
                   "code": "CSE101",
                   "name": "Programming in C",
-                  "Date": "2025-12-25"
+                  "Date": "2025-12-25",
+                  "startTime": "1:30 PM",
+                  "endTime": "3:30 PM",
+                                    "shift": "E"
+
                 },
                 {
                   "code": "PHY101",
                   "name": "Engineering Physics",
-                  "Date": "2025-11-20"
+                  "Date": "2025-11-20",
+                  "startTime": "1:30 PM",
+                  "endTime": "3:30 PM",
+                                    "shift": "M"
+
                 },
                 {
                   "code": "MTH101",
                   "name": "Calculus",
-                  "Date": "2025-11-14"
+                  "Date": "2025-11-14",
+                  "startTime": "1:30 PM",
+                  "endTime": "3:30 PM",
+                                    "shift": "M"
+
                 },
                 {
                   "code": "CSE101",
                   "name": "Programming in C",
-                  "Date": "2025-12-25"
+                  "Date": "2025-12-25",
+                  "startTime": "1:30 PM",
+                  "endTime": "3:30 PM",
+                                    "shift": "M"
+
                 }
               ]
             },
@@ -69,12 +109,20 @@
                 {
                   "code": "CSE201",
                   "name": "Data Structures",
-                  "Date": "2025-12-20"
+                  "Date": "2025-12-20",
+                  "startTime": "1:30 PM",
+                  "endTime": "3:30 PM",
+                                    "shift": "E"
+
                 },
                 {
                   "code": "CSE202",
                   "name": "Discrete Mathematics",
-                  "Date": "2025-12-20"
+                  "Date": "2025-12-20",
+                  "startTime": "1:30 PM",
+                  "endTime": "3:30 PM",
+                                    "shift": "M"
+
                 }
               ]
             }
@@ -89,11 +137,19 @@
               "subjects": [
                 {
                   "code": "PHY101",
-                  "name": "Engineering Physics"
+                  "name": "Engineering Physics",
+                  "startTime": "1:30 PM",
+                  "endTime": "3:30 PM",
+                                    "shift": "E"
+
                 },
                 {
                   "code": "ECE101",
-                  "name": "Basic Electronics"
+                  "name": "Basic Electronics",
+                  "startTime": "1:30 PM",
+                  "endTime": "3:30 PM",
+                                    "shift": "M"
+
                 }
               ]
             }
@@ -115,12 +171,20 @@
                 {
                   "code": "BCA101",
                   "name": "Computer Fundamentals",
-                  "Date": "2025-10-4"
+                  "Date": "2025-10-4",
+                  "startTime": "1:30 PM",
+                  "endTime": "3:30 PM",
+                                    "shift": "E"
+
                 },
                 {
                   "code": "BCA102",
                   "name": "C Programming",
-                  "Date": "2025-11-25"
+                  "Date": "2025-11-25",
+                  "startTime": "1:30 PM",
+                  "endTime": "3:30 PM",
+                                    "shift": "M"
+
                 }
               ]
             }
@@ -136,12 +200,20 @@
                 {
                   "code": "BCA101",
                   "name": "Computer Fundamentals",
-                  "Date": "2025-11-23"
+                  "Date": "2025-11-23",
+                  "startTime": "1:30 PM",
+                  "endTime": "3:30 PM",
+                                    "shift": "M"
+
                 },
                 {
                   "code": "BCA102",
                   "name": "C Programming",
-                  "Date": "2025-12-29"
+                  "Date": "2025-12-29",
+                  "startTime": "1:30 PM",
+                  "endTime": "3:30 PM",
+                                    "shift": "E"
+
                 }
               ]
             }

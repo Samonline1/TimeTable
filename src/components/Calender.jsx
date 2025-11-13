@@ -32,7 +32,7 @@ const Calendar = ({ year, month, examDate = [] }) => {
         })
         .map((d) => Number(d.split("-")[2])); // get the date number
 
-    console.log("examDays:", examDays);
+    // console.log("examDays:", examDays);
 
     // Add blank spaces before the first day - like in calender
     for (let i = 0; i < (firstDay === 0 ? 6 : firstDay - 1); i++) {
@@ -42,7 +42,7 @@ const Calendar = ({ year, month, examDate = [] }) => {
     // Add days
     for (let i = 1; i <= daysInMonth; i++) {
         const isExamDay = examDays.includes(i);
-        console.log(isExamDay);
+        // console.log(isExamDay);
 
         const currentDate = new Date(year, month - 1, i);
         currentDate.setHours(0, 0, 0, 0);
