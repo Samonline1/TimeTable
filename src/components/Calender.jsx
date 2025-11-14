@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Calender.css";
 
-const Calendar = ({ year, month, examDate = [] }) => {
+const Calendar = ({ year, month, examDate, CalDate }) => {
 
     const today = new Date();
     today.setHours(0, 0, 0, 0); // for past exams 
@@ -11,6 +11,8 @@ const Calendar = ({ year, month, examDate = [] }) => {
     const daysInMonth = new Date(year, month, 0).getDate();
     const firstDay = date.getDay(); // 0 (Sun) - 6 (Sat)
     const days = [];
+    // console.log(days);
+    
     // console.log("Date", date, "DaysInMonth", daysInMonth, "firstDay", firstDay);
 
     // console.log(days);
@@ -25,7 +27,10 @@ const Calendar = ({ year, month, examDate = [] }) => {
 
     //checks year and month
 
-    const examDays = examDate
+        const safeExamDate = Array.isArray(examDate) ? examDate : [];
+
+
+    const examDays = safeExamDate
         .filter((d) => {
             const [y, m] = d.split("-").map(Number);
             return y === year && m === month;
@@ -62,6 +67,7 @@ const Calendar = ({ year, month, examDate = [] }) => {
             <div key={i} className="day"
                 //className={`day ${isExamDay ? "exam-day" : ""}`}
                 style={{ backgroundColor: bgColor }}
+                onClick={()=> CalDate(i)}
 
             >
                 {i}
@@ -84,6 +90,11 @@ const Calendar = ({ year, month, examDate = [] }) => {
         "Dec",
     ];
 
+// const okio = (d)=> {
+//     console.log(d);
+    
+// }
+
     return (
         <div className="calendar">
             <h2 className="title">Reboot</h2>
@@ -97,7 +108,9 @@ const Calendar = ({ year, month, examDate = [] }) => {
                     </div>
                 ))}
             </div>
-            <div className="days-grid">{days}</div>
+            <div
+            
+             className="days-grid">{days}</div>
         </div>
     );
 };

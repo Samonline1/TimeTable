@@ -17,6 +17,65 @@
                   "Date": "2025-11-13",
                   "startTime": "2:30 PM",
                   "endTime": "5:55 PM",
+                  "shift": "M",
+                  "paper": "1st"
+                },
+                {
+                  "code": "MTH101",
+                  "name": "Calculus",
+                  "Date": "2025-11-14",
+                  "startTime": "1:30 PM",
+                  "endTime": "3:30 PM",
+                  "shift": "E",
+                  "paper": "2nd"
+                },
+                {
+                  "code": "CSE101",
+                  "name": "Programming in C",
+                  "Date": "2025-12-25",
+                  "startTime": "1:30 PM",
+                  "endTime": "3:30 PM",
+                  "shift": "M",
+                  "paper": "3rd"
+                },
+                {
+                  "code": "PHY101",
+                  "name": "Engineering Physics",
+                  "Date": "2025-11-20",
+                  "startTime": "1:30 PM",
+                  "endTime": "3:30 PM",
+                  "shift": "E"
+                },
+                {
+                  "code": "MTH101",
+                  "name": "Calculus",
+                  "Date": "2025-11-14",
+                  "startTime": "1:30 PM",
+                  "endTime": "3:30 PM",
+                  "shift": "M"
+                },
+                {
+                  "code": "CSE101",
+                  "name": "Programming in C",
+                  "Date": "2025-12-25",
+                  "startTime": "1:30 PM",
+                  "endTime": "3:30 PM",
+                  "shift": "M"
+                },
+                {
+                  "code": "CSE101",
+                  "name": "Programming in C",
+                  "Date": "2025-12-25",
+                  "startTime": "1:30 PM",
+                  "endTime": "3:30 PM",
+                  "shift": "E"
+                },
+                {
+                  "code": "PHY101",
+                  "name": "Engineering Physics",
+                  "Date": "2025-11-20",
+                  "startTime": "1:30 PM",
+                  "endTime": "3:30 PM",
                   "shift": "M"
                 },
                 {
@@ -25,8 +84,7 @@
                   "Date": "2025-11-14",
                   "startTime": "1:30 PM",
                   "endTime": "3:30 PM",
-                                    "shift": "E"
-
+                  "shift": "M"
                 },
                 {
                   "code": "CSE101",
@@ -34,72 +92,7 @@
                   "Date": "2025-12-25",
                   "startTime": "1:30 PM",
                   "endTime": "3:30 PM",
-                                    "shift": "M"
-
-
-                },
-                {
-                  "code": "PHY101",
-                  "name": "Engineering Physics",
-                  "Date": "2025-11-20",
-                  "startTime": "1:30 PM",
-                  "endTime": "3:30 PM",
-                                    "shift": "E"
-
-                },
-                {
-                  "code": "MTH101",
-                  "name": "Calculus",
-                  "Date": "2025-11-14",
-                  "startTime": "1:30 PM",
-                  "endTime": "3:30 PM",
-                                    "shift": "M"
-
-                },
-                {
-                  "code": "CSE101",
-                  "name": "Programming in C",
-                  "Date": "2025-12-25",
-                  "startTime": "1:30 PM",
-                  "endTime": "3:30 PM",
-                                    "shift": "M"
-
-                },
-                {
-                  "code": "CSE101",
-                  "name": "Programming in C",
-                  "Date": "2025-12-25",
-                  "startTime": "1:30 PM",
-                  "endTime": "3:30 PM",
-                                    "shift": "E"
-
-                },
-                {
-                  "code": "PHY101",
-                  "name": "Engineering Physics",
-                  "Date": "2025-11-20",
-                  "startTime": "1:30 PM",
-                  "endTime": "3:30 PM",
-                                    "shift": "M"
-
-                },
-                {
-                  "code": "MTH101",
-                  "name": "Calculus",
-                  "Date": "2025-11-14",
-                  "startTime": "1:30 PM",
-                  "endTime": "3:30 PM",
-                                    "shift": "M"
-
-                },
-                {
-                  "code": "CSE101",
-                  "name": "Programming in C",
-                  "Date": "2025-12-25",
-                  "startTime": "1:30 PM",
-                  "endTime": "3:30 PM",
-                                    "shift": "M"
-
+                  "shift": "M"
                 }
               ]
             },
@@ -112,8 +105,7 @@
                   "Date": "2025-12-20",
                   "startTime": "1:30 PM",
                   "endTime": "3:30 PM",
-                                    "shift": "E"
-
+                  "shift": "E"
                 },
                 {
                   "code": "CSE202",
@@ -121,8 +113,7 @@
                   "Date": "2025-12-20",
                   "startTime": "1:30 PM",
                   "endTime": "3:30 PM",
-                                    "shift": "M"
-
+                  "shift": "M"
                 }
               ]
             }
@@ -138,18 +129,18 @@
                 {
                   "code": "PHY101",
                   "name": "Engineering Physics",
+                  "Date": "2025-10-4",
                   "startTime": "1:30 PM",
                   "endTime": "3:30 PM",
-                                    "shift": "E"
-
+                  "shift": "E"
                 },
                 {
                   "code": "ECE101",
                   "name": "Basic Electronics",
+                  "Date": "2025-10-4",
                   "startTime": "1:30 PM",
                   "endTime": "3:30 PM",
-                                    "shift": "M"
-
+                  "shift": "M"
                 }
               ]
             }
@@ -174,8 +165,7 @@
                   "Date": "2025-10-4",
                   "startTime": "1:30 PM",
                   "endTime": "3:30 PM",
-                                    "shift": "E"
-
+                  "shift": "E"
                 },
                 {
                   "code": "BCA102",
@@ -183,8 +173,7 @@
                   "Date": "2025-11-25",
                   "startTime": "1:30 PM",
                   "endTime": "3:30 PM",
-                                    "shift": "M"
-
+                  "shift": "M"
                 }
               ]
             }
@@ -203,8 +192,7 @@
                   "Date": "2025-11-23",
                   "startTime": "1:30 PM",
                   "endTime": "3:30 PM",
-                                    "shift": "M"
-
+                  "shift": "M"
                 },
                 {
                   "code": "BCA102",
@@ -212,8 +200,7 @@
                   "Date": "2025-12-29",
                   "startTime": "1:30 PM",
                   "endTime": "3:30 PM",
-                                    "shift": "E"
-
+                  "shift": "E"
                 }
               ]
             }
