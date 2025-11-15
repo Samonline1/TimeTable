@@ -12,7 +12,7 @@ const Calendar = ({ year, month, examDate, CalDate }) => {
     const firstDay = date.getDay(); // 0 (Sun) - 6 (Sat)
     const days = [];
     // console.log(days);
-    
+
     // console.log("Date", date, "DaysInMonth", daysInMonth, "firstDay", firstDay);
 
     // console.log(days);
@@ -27,7 +27,7 @@ const Calendar = ({ year, month, examDate, CalDate }) => {
 
     //checks year and month
 
-        const safeExamDate = Array.isArray(examDate) ? examDate : [];
+    const safeExamDate = Array.isArray(examDate) ? examDate : [];
 
 
     const examDays = safeExamDate
@@ -67,7 +67,7 @@ const Calendar = ({ year, month, examDate, CalDate }) => {
             <div key={i} className="day"
                 //className={`day ${isExamDay ? "exam-day" : ""}`}
                 style={{ backgroundColor: bgColor }}
-                onClick={()=> CalDate(i)}
+                onClick={() => CalDate(i)}
 
             >
                 {i}
@@ -90,17 +90,17 @@ const Calendar = ({ year, month, examDate, CalDate }) => {
         "Dec",
     ];
 
-// const okio = (d)=> {
-//     console.log(d);
-    
-// }
+    // const okio = (d)=> {
+    //     console.log(d);
+
+    // }
 
     return (
         <div className="calendar">
-            <h2 className="title">Reboot</h2>
-            <p className="subtitle">
+            <h2 className="title pb-2"> {monthNames[month - 1]} {year}</h2>
+            {/* <p className="subtitle">
                 Calendar {monthNames[month - 1]} {year}
-            </p>
+            </p> */}
             <div className="weekdays">
                 {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((d) => (
                     <div key={d} className="weekday">
@@ -109,8 +109,8 @@ const Calendar = ({ year, month, examDate, CalDate }) => {
                 ))}
             </div>
             <div
-            
-             className="days-grid">{days}</div>
+
+                className="days-grid">{days}</div>
         </div>
     );
 };

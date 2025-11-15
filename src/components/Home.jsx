@@ -1,84 +1,152 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import examData from "../data/datesheet.json";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Home = () => {
-  // console.log(examData['B.Tech']['All Branches']['Semester 1']);
-  //   console.log(examData['B.Tech']);
-
-  // const csSem5 = examData["B.Tech"]["CS"]["Semester 5"];
-  // console.log(csSem5);
-
   const navigate = useNavigate();
-  console.log(examData.courses[0].branches[0].semesters[0].subjects[0].name);
-
-  console.log(examData.courses.map((e) => e.name));
 
   const [course, setCourse] = useState("");
-  // setted as string it considred number as string
-  // console.log(examData.courses[course].branches.map((b)=> b.name));
-  console.log(
-    examData.courses.find((c) => c.id === course)?.branches.map((b) => b.id)
-  );
-
-  var findBranch = examData.courses.find((c) => c.id === course); // found selected course
-
   const [branch, setBranch] = useState("");
-
-  var findSem = findBranch?.branches.find((b) => b.id === branch); // to find selected branch
-  console.log(findSem);
-
   const [sem, setSem] = useState("");
-  console.log(sem);
 
-  const checkTimeTable = (e) => {
-    setSem(e);
+  const selectedCourse = examData.courses.find((c) => c.id === course);
+  const selectedBranch = selectedCourse?.branches.find((b) => b.id === branch);
 
-    const studentData = { course, branch, sem: e };
-    localStorage.setItem("studentData", JSON.stringify(studentData));
-    navigate(`/${course}/${branch}/${e}`);
+  const handleSemSelect = (semId) => {
+    setSem(semId);
+
+    const newEntry = { course, branch, sem: semId, time: Date.now() };
+
+    let existing = [];
+
+    try {
+      const stored = JSON.parse(localStorage.getItem("studentData"));
+      if (Array.isArray(stored)) {
+        existing = stored;
+      }
+    } catch (e) {
+      console.log("LocalStorage corrupted, resetting.");
+    }
+
+    const updated = [...existing, newEntry];
+    localStorage.setItem("studentData", JSON.stringify(updated));
+
+    navigate(`/${course}/${branch}/${semId}`);
   };
 
+  //   const handleSemSelect = (semId) => {
+  //     setSem(semId);
+
+  //     // const studentData = { course, branch, sem: semId };
+  //     // localStorage.setItem("studentData", JSON.stringify(studentData));
+
+  //  // Step 1: Fetch old array or create new one
+  //      const existing = JSON.parse(localStorage.getItem("studentData")) || [];
+
+  //   // Step 2: Create new entry
+  //   const newEntry = {
+  //     course,
+  //     branch,
+  //     sem: semId,
+  //     time: Date.now() // optional
+  //   };
+
+  //   existing.push(newEntry);
+
+  //   // Step 4: Save updated array
+  //   localStorage.setItem("studentData", JSON.stringify([...existing, existing]));
+
+  //     console.log("Navigating to:", course, branch, semId);
+
+  //           navigate(`/${course}/${branch}/${semId}`);
+
+  //   };
+
   return (
-    <div className="flex h-[100vh] w-screen bg-red-700 gap-6 p-10">
-      {examData &&
-        examData.courses.map((course, index) => (
-          <div key={index}>
-            <button
-              className="h-30 w-30 bg-blue-700 p-4"
-              onClick={() => setCourse(course.id)}
+    <div className="flex flex-col lg:flex-row h-screen w-screen bg-gray-950 text-white p-2 lg:p-10 ">
+      <div className="lg:absolute flex flex-col justify-center items-center mb-4  gap-2 w-full lg:w-[90%] border-b border-gray-900 mt-3">
+        <p className="text-2xl font-bold">JS Exam Time Table</p>
+        <p className="uppercase text-gray-500 mb-5 text-sm lg:text-md">
+          Odd Semster examination 2025-2026
+        </p>
+      </div>
+
+      {/* LEFT SIDE – COURSE SELECT */}
+      <div className="flex flex-col gap-4 w-full lg:w-[28%] items-center justify-center lg:pt-10 ">
+        <h1 className="text-2xl font-bold mb-2">Select Your Course</h1>
+
+        <div className="grid grid-cols-2 gap-4 w-full max-w-sm">
+          {examData.courses.map((c, index) => (
+            <motion.button
+              key={index}
+              onClick={() => {
+                setCourse(c.id);
+                setBranch("");
+                setSem("");
+              }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.12 }}
+              className={`p-4 rounded-xl text-lg font-semibold transition shine-btn
+                ${course === c.id
+                  ? "bg-blue-600"
+                  : "bg-gray-800 hover:bg-gray-700"
+                }`}
             >
-              {course.id.toUpperCase()}
-            </button>
-          </div>
-        ))}
+              {c.id.toUpperCase()}
+            </motion.button>
+          ))}
+        </div>
+      </div>
 
-      {findBranch && (
-        <div className="absolute bg-green-700 w-[90%] h-[90%] p-10">
-          <div className="flex gap-3 p-5 ">
-            {findBranch.branches.map((branch, index) => (
-              <div key={index}>
-                <button
-                  className="h-30 w-30 bg-blue-700 p-4"
-                  onClick={() => setBranch(branch.id)}
-                >
-                  {branch.id}
-                </button>
-              </div>
-            ))}
-          </div>
+      {/* RIGHT SIDE – SLIDING PANEL */}
+      {selectedCourse && (
+        <div
+          className="lg:ml-5 lg:mt-35 absolute lg:static inset-0 lg:inset-auto bg-gray-900/20 opacity-100 backdrop-blur-xl lg:bg-gray-900/70 
+                        w-full lg:w-[70%] h-full lg:h-auto p-6 rounded-xl shadow-lg 
+                        flex flex-col gap-6 justify-center items-center"
+        >
+          {/* BRANCH SELECT */}
+          <div className="w-full max-w-xl max-h-[30vh] overflow-y-auto no-scrollbar">
+            <h2 className="text-xl font-bold mb-3">Select Branch</h2>
 
-          {findSem && (
-            <div className="flex gap-3 p-5">
-              {findSem.semesters.map((sem, index) => (
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 ">
+              {selectedCourse.branches.map((b, index) => (
                 <button
-                  className="h-30 w-30 bg-blue-700 p-4"
-                  onClick={() => setSem(() => checkTimeTable(sem.id))}
                   key={index}
+                  onClick={() => {
+                    setBranch(b.id);
+                    setSem("");
+                  }}
+                  className={`p-3 rounded-lg text-lg transition 
+                  ${branch === b.id
+                      ? "bg-green-600"
+                      : "bg-gray-800 hover:bg-gray-700"
+                    }`}
                 >
-                  {sem.id}
+                  {b.id}
                 </button>
               ))}
+            </div>
+          </div>
+
+          {/* SEM SELECT */}
+          {selectedBranch && (
+            <div className="w-full max-w-xl max-h-[30vh] overflow-y-auto no-scrollbar">
+              <h2 className="text-xl font-bold mb-3">Select Semester</h2>
+
+              <div className="grid grid-cols-3 gap-4">
+                {selectedBranch.semesters.map((s, index) => (
+                  <button
+                    key={index}
+                    onClick={() => handleSemSelect(s.id)}
+                    className="p-3 rounded-lg text-lg bg-gray-800 hover:bg-gray-700"
+                  >
+                    {s.id}
+                  </button>
+                ))}
+              </div>
             </div>
           )}
         </div>
