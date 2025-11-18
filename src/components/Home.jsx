@@ -73,7 +73,7 @@ const Home = () => {
       </div>
 
       {/* LEFT SIDE – COURSE SELECT */}
-      <div className="flex flex-col gap-4 w-full lg:w-[28%] items-center justify-center lg:pt-10 ">
+      <div className="flex flex-col gap-4 w-full lg:w-[28%] items-center justify-center lg:pt-10 px-4 ">
         <h1 className="text-2xl font-bold mb-2">Select Your Course</h1>
 
         <div className="grid grid-cols-2 gap-4 w-full max-w-sm">
@@ -88,10 +88,10 @@ const Home = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: index * 0.12 }}
-              className={`p-4 rounded-xl text-lg font-semibold transition shine-btn
+              className={`p-4 rounded-xl text-lg font-semibold transition 
                 ${course === c.id
                   ? "bg-blue-600"
-                  : "bg-gray-800 hover:bg-gray-700"
+                  : "bg-gray-800 hover:bg-gray-700 shine-btn"
                 }`}
             >
               {c.id.toUpperCase()}
@@ -108,7 +108,7 @@ const Home = () => {
                         flex flex-col gap-6 justify-center items-center"
         >
           {/* BRANCH SELECT */}
-          <div className="w-full max-w-xl max-h-[30vh] overflow-y-auto no-scrollbar">
+          <div className="w-full max-w-xl max-h-[30vh] overflow-y-auto no-scrollbar px-3">
             <h2 className="text-xl font-bold mb-3">Select Branch</h2>
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 ">
@@ -122,7 +122,7 @@ const Home = () => {
                   className={`p-3 rounded-lg text-lg transition 
                   ${branch === b.id
                       ? "bg-green-600"
-                      : "bg-gray-800 hover:bg-gray-700"
+                      : "bg-gray-800 hover:bg-gray-700 shine-btn"
                     }`}
                 >
                   {b.id}
@@ -133,15 +133,15 @@ const Home = () => {
 
           {/* SEM SELECT */}
           {selectedBranch && (
-            <div className="w-full max-w-xl max-h-[30vh] overflow-y-auto no-scrollbar">
+            <div className="w-full max-w-xl max-h-[30vh] overflow-y-auto no-scrollbar px-4">
               <h2 className="text-xl font-bold mb-3">Select Semester</h2>
 
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-6 w-full gap-2 ">
                 {selectedBranch.semesters.map((s, index) => (
                   <button
                     key={index}
                     onClick={() => handleSemSelect(s.id)}
-                    className="p-3 rounded-lg text-lg bg-gray-800 hover:bg-gray-700"
+                    className="p-3 rounded-lg text-lg bg-gray-800 hover:bg-gray-700 flex justify-center items-center"
                   >
                     {s.id}
                   </button>

@@ -29,6 +29,8 @@ const Calendar = ({ year, month, examDate, CalDate }) => {
 
     const safeExamDate = Array.isArray(examDate) ? examDate : [];
 
+    // console.log(safeExamDate);
+    
 
     const examDays = safeExamDate
         .filter((d) => {
@@ -37,7 +39,7 @@ const Calendar = ({ year, month, examDate, CalDate }) => {
         })
         .map((d) => Number(d.split("-")[2])); // get the date number
 
-    // console.log("examDays:", examDays);
+    // console.log("examDays:", examDays.length);
 
     // Add blank spaces before the first day - like in calender
     for (let i = 0; i < (firstDay === 0 ? 6 : firstDay - 1); i++) {
@@ -98,9 +100,9 @@ const Calendar = ({ year, month, examDate, CalDate }) => {
     return (
         <div className="calendar">
             <h2 className="title pb-2"> {monthNames[month - 1]} {year}</h2>
-            {/* <p className="subtitle">
-                Calendar {monthNames[month - 1]} {year}
-            </p> */}
+            <p className="subtitle">
+                {examDays.length} Exams in {monthNames[month - 1]}
+            </p> 
             <div className="weekdays">
                 {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((d) => (
                     <div key={d} className="weekday">

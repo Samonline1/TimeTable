@@ -132,7 +132,7 @@ const TimeTable = () => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <div className="h-full w-screen lg:w-full bg-gray-950 text-white p-3 flex flex-col items-center pb-5">
+                    <div className="h-screen w-screen lg:w-full bg-gray-950 text-white p-3 flex flex-col items-center pb-5">
                         <div className="flex flex-col justify-center items-center mb-4 p-5 gap-2 border-b border-gray-800 w-full">
                             <p className="text-2xl font-bold" onClick={() => navigate(`/`)}>
                                 JS Exam Time Table
@@ -230,7 +230,7 @@ const TimeTable = () => {
                             </div>
 
                             {/* ============ SUBJECT LIST ============ */}
-                            <div className="lg:w-[80%] w-full max-h-60 overflow-y-auto no-scrollbar space-y-2 ">
+                            <div className="lg:w-[80%] h-90 w-full overflow-y-auto no-scrollbar space-y-2 ">
                                 {semester.subjects.map((subject, index) => {
                                     const { days, hours, minutes, seconds, phase, color } =
                                         getRemainingTime(subject);
@@ -282,7 +282,7 @@ const TimeTable = () => {
                                 className="w-full lg:w-[80%] bottom-0 left-0 z-50 
                 bg-gray-900/20 backdrop-blur-md 
                  
-                px-6 py-3 flex items-center justify-center gap-3 rounded-xl "
+                px-6 py-3 flex items-center justify-center gap-3 rounded-xl mb-5 "
                             >
                                 <a
                                     href="/"

@@ -2,6 +2,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./components/Home.jsx";
 import TimeTable from "./components/TimeTable.jsx";
 import History from "./components/History.jsx";
+import Assignment from "./components/assignments/Assignment.jsx";
 
 
 const router = createBrowserRouter([
@@ -18,6 +19,13 @@ const router = createBrowserRouter([
     element: 
     <div>
       <TimeTable />
+    </div>,
+  },
+  {
+    path: "/assignments",
+    element: 
+    <div>
+      <Assignment />
     </div>,
   },
 ]);

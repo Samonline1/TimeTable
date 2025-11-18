@@ -19,7 +19,7 @@ const History = () => {
             <div
                 className="w-full max-w-2xl 
                      
-                      p-2 shadow-xl h-[90vh] overflow-y-auto no-scrollbar"
+                      p-2 lg:h-[70vh] h-135 overflow-y-auto no-scrollbar"
             >
                 {storedData.length === 0 ? (
                     <p className="text-gray-500 text-center py-6">No history found.</p>
