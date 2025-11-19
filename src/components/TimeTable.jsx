@@ -146,12 +146,12 @@ const TimeTable = () => {
                         {showInfo && (
                             <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex justify-center items-center z-50 p-4">
                                 <div className="relative w-full max-w-sm bg-gray-900 rounded-xl p-5 shadow-lg">
-                                    <button
+                                    <p
                                         onClick={() => setShowInfo(false)}
-                                        className="absolute top-3 right-3 text-xl text-gray-300 hover:text-white"
+                                        className="absolute top-4 right-4 text-xl text-gray-400 hover:text-white popupbtn"
                                     >
                                         ✕
-                                    </button>
+                                    </p>
 
                                     {subject ? (
                                         <div className="space-y-4 mt-3">

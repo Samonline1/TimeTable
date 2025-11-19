@@ -1,0 +1,215 @@
+/* GLOBAL */
+.l1style {
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px 50px 20px;
+}
+
+/* SCROLLBAR */
+.l1style * {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.l1style *::-webkit-scrollbar {
+    display: none;
+}
+
+/* PANEL */
+.l1style .assignment-panel {
+    font-family: "Times New Roman", Times, serif;
+    max-width: 90%;
+    margin: 50px auto;
+    border: 1px solid #6f6a6a;
+    padding: 28px 22px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #00080f, #032035, #00090f);
+    background-size: 300% 300%;
+    animation: morph 12s ease-in-out infinite;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+@keyframes morph {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* TITLE */
+.l1style .assignment-title {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 22px;
+    color: white;
+}
+
+/* LABEL */
+.l1style .assignment-label {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 6px;
+    display: block;
+    color: #e6e6e6;
+}
+
+/* INPUT */
+.l1style .assignment-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #b4b4b4;
+    border-radius: 6px;
+    font-size: 18px;
+    font-family: "Times New Roman", Times, serif;
+    margin-bottom: 18px;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+/* BUTTON */
+.l1style .assignment-btn {
+    width: 100%;
+    background: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: 0.2s;
+}
+.l1style .assignment-btn:hover { background: #005fcc; }
+.l1style .assignment-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ERROR */
+.l1style .assignment-error {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* WRAPPER */
+.l1style .preview-wrapper {
+    font-family: "Times New Roman", Times, serif;
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 100mm;
+    width: 90%;
+    height: 120mm;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+}
+
+/* PAGE */
+.l1style .preview-page {
+    flex-shrink: 0;
+    width: 210mm;
+    height: 300mm;
+    background: white;
+    border: 1px solid #848484;
+    border-radius: 4px;
+    padding: 30px 50px;
+    box-shadow: 0 0 12px #0005;
+    transform: scale(0.8);
+    transform-origin: top center;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .l1style .preview-page { transform: scale(0.65); }
+}
+@media (max-width: 600px) {
+    .l1style .preview-page { transform: scale(0.45); }
+}
+
+/* HEADERS */
+.l1style .preview-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 50px;
+    letter-spacing: 1px;
+}
+.l1style .preview-subtext {
+    font-size: 20px;
+    margin-top: 15px;
+}
+.l1style .preview-subject {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 40px;
+    letter-spacing: 0.5px;
+}
+
+/* LOGO */
+.l1style .preview-logo {
+    margin: 40px auto 30px;
+    width: 150px;
+    height: 150px;
+}
+
+/* UNIVERSITY */
+.l1style .preview-university {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.l1style .preview-session {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+/* SUBMISSION */
+.l1style .preview-submission-details {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.l1style .preview-submitted-to,
+.l1style .preview-submitted-by {
+    width: 45%;
+    line-height: 1.5;
+}
+.l1style .preview-submitted-by { text-align: right; }
+
+.l1style .preview-submission-header {
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.l1style .preview-submission-name {
+    font-size: 18px;
+    margin-top: 5px;
+}
+.l1style .preview-submission-role {
+    font-size: 16px;
+    margin-top: 2px;
+}
+
+/* SUBMIT AREA */
+.l1style .submitSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}

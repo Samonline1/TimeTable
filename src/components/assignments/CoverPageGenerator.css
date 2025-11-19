@@ -1,320 +1,341 @@
-/* GLOBAL academic font */
-body {
-    width: 100%;
-    height: 100%;
-    letter-spacing: 0.5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px 20px 5px 20px;
-    padding-bottom: 50px;
-
+/* GLOBAL */
+:root {
+    --color-dark-bg: #0d1117;
+    --color-panel-bg: #161b22;
+    --color-text-light: #c9d1d9;
+    --color-primary: #58a6ff;
+    --color-danger: #ff4d4d;
+    --color-border: #30363d;
+    --color-hr-gradient: linear-gradient(to right, rgba(201, 209, 217, 0), rgba(201, 209, 217, 0.3), rgba(201, 209, 217, 0));
 }
 
-/* Hide scrollbar for all browsers */
+.header-bar {
+  border-bottom: 1px solid var(--color-border);
+}
+
+
+
+.assignmentpage {
+    min-height: 100vh;
+    letter-spacing: 0.5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+    color: var(--color-text-light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 * {
-  scrollbar-width: none;     /* Firefox */
-  -ms-overflow-style: none;  /* IE/Edge */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 *::-webkit-scrollbar {
-  display: none;             /* Chrome/Safari */
+    display: none;
 }
 
 
-/* Container panel */
+/* PANEL */
 .assignment-panel {
-        font-family: "Times New Roman", Times, serif;
-
-    max-width: 400px;
-    margin: 50px auto;
-    border: .5px solid #807a7a;
-    padding: 25px 20px 25px 20px;
-    border-radius: 10px;
-    /* background: white; */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  background: linear-gradient(90deg, #00080f, #051d33, #010b13);
-  background-size: 300% 300%;
-  animation: morph 12s ease-in-out infinite;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-   
-}
-
-
-
-  
-
-@keyframes morph {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Page title */
-.assignment-title {
-    font-size: 28px;
-    font-weight: bold;
-    text-align: center;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-}
-
-/* Labels */
-.assignment-label {
-    font-weight: bold;
-    font-size: 18px;
-    margin-bottom: 5px;
-    display: block;
-}
-
-/* Inputs */
-.assignment-input {
+    max-width: 440px;
     width: 100%;
-    padding: 10px;
-    border: 1px solid #bbb;
-    border-radius: 5px;
-    font-size: 18px;
-    font-family: "Times New Roman", Times, serif;
-    box-sizing: border-box;
-    margin-bottom: 15px;
-}
-
-/* Button */
-.assignment-btn {
-    width: 100%;
-    background-color: #007bff;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 6px;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    letter-spacing: 0.5px;
-    transition: background 0.2s;
-}
-
-.assignment-btn:hover {
-    background-color: #005fcc;
-}
-
-/* Disabled */
-.assignment-btn:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-}
-
-/* Error box */
-.assignment-error {
-    background: #f8d7da;
-    color: #721c24;
-    padding: 12px;
-    border-radius: 6px;
-    margin-bottom: 15px;
-    font-family: "Times New Roman", Times, serif;
-}
-
-
-
-/* visual look pages */
-/*
-|--------------------------------------------------------------------------
-| 1. PREVIEW WRAPPER (Handles Scrolling and Background)
-|--------------------------------------------------------------------------
-*/
-/*
-|--------------------------------------------------------------------------
-| 1. PREVIEW WRAPPER (Handles Scrolling and Background) - REVISED
-|--------------------------------------------------------------------------
-*/
-/*
-|--------------------------------------------------------------------------
-| 1. PREVIEW WRAPPER (Handles Scrolling and Background) - REVISED FOR RESPONSIVENESS
-/*
-|--------------------------------------------------------------------------
-| 1. PREVIEW WRAPPER (Handles Scrolling and Background) - FINAL REVISION
-|--------------------------------------------------------------------------
-*/
-.preview-wrapper {
-    font-family: "Times New Roman", Times, serif;
-    margin-top: 40px;
-    
-    /* Flex settings for layout */
-    display: flex;
-    justify-content: flex-start; 
-    align-items: flex-start; 
-     /* Spacing between pages */
-    
-    /* background: green; */
-    /* REVISED: Set a fixed, large width to guarantee overflow and scrolling */
-    /* Calculation: 3 pages (scaled to 0.8) + 2 gaps (40px) = 
-       3 * (210mm * 0.8) + 2 * 40px = 504mm + 80px (approx 584mm or ~2300px) 
-       Using a generous 2400px ensures scroll on any monitor. */
-    min-width: 200mm;
-    width: 130px; /* Let the content determine the width */
-    height: 200mm; /* Reverted to 140mm as per original code */
-    
-    /* Horizontal Scroll settings remain */
-    overflow-x: auto; 
-        overflow-y: hidden; 
-
-    flex-wrap: nowrap; 
-    padding: 10px;
-}
-
-/*
-|--------------------------------------------------------------------------
-| 2. A4 PAGE STYLES (The Document Itself) - FINAL REVISION
-|--------------------------------------------------------------------------
-*/
-.preview-page {
-    /* CRITICAL: Prevents the A4 page from shrinking */
-    flex-shrink: 0; 
-
-    /* Set dimensions for A4 */
-    width: 210mm;
-    height: 300mm; 
-    
-    background: white;
-    border: 1px solid #848484;
-    border-radius: 4px;
-    padding: 30px 50px; 
-    box-shadow: 0 0 10px #0004;
-    
-    /* DEFAULT SCALE for Desktop/Larger Screens */
-    transform: scale(0.8); 
-    transform-origin: top center;
-    color: black;
-    
-    /* Flex for vertical layout */
+    margin: 0 10px 0 auto;
+    border: 1px solid var(--color-border);
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
-    text-align: center; 
+    flex-shrink: 0;
 }
 
-/* --------------------------------------------------------------------- */
-/* RESPONSIVE SCALING USING MEDIA QUERIES (Adjusts page view size, scroll remains) */
-/* --------------------------------------------------------------------- */
-
-/* Apply a smaller scale for Tablets and smaller desktops (Max width 1024px) */
-@media (max-width: 1024px) {
-    .preview-page {
-        transform: scale(0.65); /* Scale down for smaller screens */
-    }
-}
-
-/* Apply the smallest scale for Mobile devices (Max width 600px) */
-@media (max-width: 600px) {
-    .preview-page {
-        transform: scale(0.45); /* Scale down significantly for mobile view */
-    }
-}
-
-
-/*
-|--------------------------------------------------------------------------
-| 3. HEADER TEXT STYLES (Title, Sub Code, Subject)
-|--------------------------------------------------------------------------
-*/
-.preview-title {
-    /* ASSIGNMENT FILE */
-    font-size: 32px; 
-    font-weight: bold;
-    margin-top: 50px; 
-    letter-spacing: 1px;
-}
-
-.preview-subtext {
-    /* ON, Sub Code: BTCS-501 */
-    font-size: 20px;
-    margin-top: 15px; 
-}
-
-.preview-subject {
-    /* DATABASE MANAGEMENT SYSTEM */
-    font-size: 30px;
-    font-weight: bold;
-    margin-top: 40px; 
-    letter-spacing: 0.5px;
-}
-
-/*
-|--------------------------------------------------------------------------
-| 4. LOGO, UNIVERSITY, AND SESSION
-|--------------------------------------------------------------------------
-*/
-.preview-logo {
-    /* Placeholder styles for the logo image */
-    margin: 40px auto 30px; 
-    width: 150px; 
-    height: 150px; 
-    background-color: transparent; 
-}
-
-.preview-university {
-    /* J. S. UNIVERSITY, SHIKOHABAD */
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-.preview-session {
-    /* Session: 2025-26 */
-    font-size: 20px;
+.assignment-panel h3 {
+    color: var(--color-primary);
     margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 600;
 }
 
-
-/*
-|--------------------------------------------------------------------------
-| 5. SUBMISSION DETAILS (Bottom Section)
-|--------------------------------------------------------------------------
-*/
-
-/* Container to hold both columns, pushed to the bottom */
-.preview-submission-details {
-    margin-top: auto; 
-    display: flex;
-    justify-content: space-between; 
-    text-align: left; 
-    width: 100%;
+.assignment-panel hr {
+    border: 0;
+    height: 1px;
+    background: var(--color-hr-gradient);
+    margin: 20px 0;
 }
 
-.preview-submitted-to,
-.preview-submitted-by {
-    width: 45%; 
-    line-height: 1.5; 
+/* TITLE */
+.assignment-title {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: start;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    color: var(--color-text-light);
 }
 
-.preview-submitted-by {
-    text-align: right; 
-}
-
-.preview-submission-header {
-    /* Submitted to / Submitted By */
-    font-weight: bold;
-    font-size: 20px;
-    border-bottom: 2px solid black; 
-    padding-bottom: 5px;
+/* INPUTS */
+.input-group {
     margin-bottom: 10px;
 }
 
-.preview-submission-name {
-    /* Pradeep Kumar / Student Name */
-    font-size: 18px;
-    margin-top: 5px;
-}
-
-.preview-submission-role {
-    /* Assistant Professor (CSE) / Enrollment No. */
-    font-size: 16px;
-    margin-top: 2px;
-}
-
-.submitSection{
+.input-group-inline {
     display: flex;
-    justify-content: space-between;
-    align-items: start;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.assignment-label {
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+    color: var(--color-text-light);
+}
+
+.assignment-label.mandatory::after {
+    content: " *";
+    color: var(--color-danger);
+    font-weight: bold;
+}
+
+.assignment-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    background-color: #21262d;
+    color: var(--color-text-light);
+    transition: border-color 0.2s;
+}
+
+.assignment-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+/* BUTTON */
+.assignment-btn {
+    width: 100%;
+    background-color: var(--color-primary);
+    color: var(--color-dark-bg);
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: background 0.2s, transform 0.1s;
+    margin-top: 15px;
+}
+
+.assignment-btn:hover {
+    background-color: #3e8ae8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.4);
+}
+
+.assignment-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* ERROR */
+.assignment-error {
+    background: #49171d;
+    color: #ffbaba;
+    border: 1px solid #721c24;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+/* A4PAGE */
+.pdf-page {
+    width: 210mm;
+    height: 297mm;
+    background: white;
+    color: black;
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    line-height: 1.2;
+}
+
+/* PREVIEW */
+.preview-wrapper {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 100vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 10px;
+    flex-grow: 1;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.preview-page {
+    width: 230mm;
+    height: 257mm;
+    border: 1px solid #848484;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transform: scale(0.8);
+    transform-origin: top center;
+    background-color: #ffffff;
+    color: black;
+    padding: 0px 25px;
+    text-align: center;
+}
+
+/* TEXT */
+.preview-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+
+.preview-subtext {
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: bolder;
+}
+
+.preview-subject {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+
+.preview-page img {
+    width: 150px;
+    height: auto;
+    margin: 30px auto 50px;
+}
+
+/* UNI */
+.preview-university {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.preview-session {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: auto;
+}
+
+/* SUBMIT */
+.submitSection {
+    margin-top: auto;
+    padding-top: 50px;
+    display: flex;
+    gap: 70px;
+    padding: 0px 0px 0 80px;
+    align-items: flex-start;
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
+}
+
+.submitSection .col {
+    width: 48%;
+    line-height: 1.5;
+}
+
+.submitSection strong {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.submitSection .content {
+    font-weight: normal;
+    display: block;
+}
+
+.submitSection .col:last-child {
+    text-align: right;
+}
+
+/* RESPONSIVE */
+@media (min-width: 1200px) {
+    .assignment-page-scope.body {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 40px 0 0 40px;
+        width: 2000px;
+    }
+
+    .assignment-panel {
+        max-width: 400px;
+        
+        position: sticky;
+        top: 40px;
+        height: min-content;
+    }
+
+    .preview-wrapper {
+        
+        max-width: 800px;
+        justify-content: flex-start;
+        padding-bottom: 20px;
+    }
+
+    .preview-page {
+        transform: scale(0.9);
+    }
+}
+
+ @media (max-width: 1000px) {
+   .assignment-page-scope.body {
+        flex-direction: column;
+        display: flex;
+    }
+
+    .assignment-panel {
+        max-width: 100%;
+        padding: 20px ;
+    }
+
+    .preview-wrapper,
+    .preview-page {
+        display: none;
+    }
+} 
+
+@media (max-width: 650px) {
+    .assignment-page-scope.body {
+        flex-direction: column;
+    }
+
+    .assignment-panel {
+        max-width: 100%;
+        padding: 20px ;
+    }
+
+    .preview-wrapper,
+    .preview-page {
+        display: none;
+    }
 }

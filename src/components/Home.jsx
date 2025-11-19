@@ -65,7 +65,7 @@ const Home = () => {
 
   return (
     <div className="flex flex-col lg:flex-row h-screen w-screen bg-gray-950 text-white p-2 lg:p-10 ">
-      <div className="lg:absolute flex flex-col justify-center items-center mb-4  gap-2 w-full lg:w-[90%] border-b border-gray-900 mt-3">
+      <div className="lg:absolute flex flex-col justify-center items-center mb-4  gap-2 w-full lg:w-[90%] border-b border-gray-900 lg:m-0 mt-3">
         <p className="text-2xl font-bold">JS Exam Time Table</p>
         <p className="uppercase text-gray-500 mb-5 text-sm lg:text-md">
           Odd Semster examination 2025-2026
@@ -121,7 +121,7 @@ const Home = () => {
                   }}
                   className={`p-3 rounded-lg text-lg transition 
                   ${branch === b.id
-                      ? "bg-green-600"
+                      ? "bg-blue-600"
                       : "bg-gray-800 hover:bg-gray-700 shine-btn"
                     }`}
                 >

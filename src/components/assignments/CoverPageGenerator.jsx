@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { PDFDocument, StandardFonts, rgb } from "pdf-lib";
 import "./CoverPageGenerator.css";
-import jsLogo from "./jsimg.jpg"; 
+import jsLogo from "./jsimg.jpg";
 
-// Save
+// utils
 const savePdfToFile = (pdfBytes, fileName) => {
   const blob = new Blob([pdfBytes], { type: "application/pdf" });
   const url = URL.createObjectURL(blob);
@@ -14,12 +14,12 @@ const savePdfToFile = (pdfBytes, fileName) => {
   URL.revokeObjectURL(url);
 };
 
-// Base64
 const urlToBase64 = async (url) => {
   const response = await fetch(url);
-  if (!response.ok) {
-    throw new Error(`Failed to fetch image: ${response.status} ${response.statusText}`);
-  }
+  if (!response.ok)
+    throw new Error(
+      `Failed to fetch image: ${response.status} ${response.statusText}`
+    );
   const blob = await response.blob();
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
@@ -29,28 +29,30 @@ const urlToBase64 = async (url) => {
   });
 };
 
-// ImageEmbed
 const embedImageFromDataUrl = async (pdfDoc, dataUrl) => {
-  if (dataUrl.startsWith("data:image/png")) {
+  if (dataUrl.startsWith("data:image/png"))
     return await pdfDoc.embedPng(dataUrl);
-  } else if (dataUrl.startsWith("data:image/jpeg") || dataUrl.startsWith("data:image/jpg")) {
+  if (
+    dataUrl.startsWith("data:image/jpeg") ||
+    dataUrl.startsWith("data:image/jpg")
+  )
     return await pdfDoc.embedJpg(dataUrl);
-  } else {
-    if (dataUrl.startsWith("data:image/")) {
-      return await pdfDoc.embedJpg(dataUrl);
-    }
-    throw new Error("Unsupported or unrecognized image format for embedding.");
-  }
+  if (dataUrl.startsWith("data:image/")) return await pdfDoc.embedJpg(dataUrl);
+  throw new Error("Unsupported or unrecognized image format.");
 };
 
-// PDFGen
+// pdf
 const generateSinglePDF = async (
   title,
-  subCode,
+  codeType,
+  codeValue,
   subject,
   fileName,
   name,
   roll,
+  course,
+  submittedToName,
+  submittedToDesignation,
   logoUrl
 ) => {
   const pdfDoc = await PDFDocument.create();
@@ -63,7 +65,6 @@ const generateSinglePDF = async (
   const CENTER_LINE_X = A4_WIDTH / 2;
   const TEXT_COLOR = rgb(0.1, 0.1, 0.1);
   const LINE_HEIGHT_SM = 20;
-
   const LOGO_WIDTH = 120;
   const LOGO_HEIGHT = 140;
 
@@ -72,57 +73,61 @@ const generateSinglePDF = async (
     const logoBase64DataUrl = await urlToBase64(logoUrl);
     embeddedImage = await embedImageFromDataUrl(pdfDoc, logoBase64DataUrl);
   } catch (err) {
-    console.error("LOGO EMBEDDING FAILED", err);
+    console.error("LOGO EMBEDDING FAILED.", err);
   }
 
   const page = pdfDoc.addPage([A4_WIDTH, A4_HEIGHT]);
-
-  // Header
   let y = A4_HEIGHT - 70;
 
   const titleText = title.toUpperCase();
+  const titleSize = 30;
   page.drawText(titleText, {
-    x: CENTER_LINE_X - timesBoldFont.widthOfTextAtSize(titleText, 30) / 2,
+    x:
+      CENTER_LINE_X - timesBoldFont.widthOfTextAtSize(titleText, titleSize) / 2,
     y,
-    size: 30,
+    size: titleSize,
     font: timesBoldFont,
     color: TEXT_COLOR,
   });
 
   y -= 40;
-
   const onText = "ON";
+  const onSize = 20;
   page.drawText(onText, {
-    x: CENTER_LINE_X - timesBoldFont.widthOfTextAtSize(onText, 20) / 2,
+    x: CENTER_LINE_X - timesBoldFont.widthOfTextAtSize(onText, onSize) / 2,
     y,
-    size: 20,
+    size: onSize,
     font: timesBoldFont,
     color: TEXT_COLOR,
   });
 
   y -= 40;
-
-  const subCodeText = `Sub Code: ${subCode}`;
-  page.drawText(subCodeText, {
-    x: CENTER_LINE_X - timesBoldFont.widthOfTextAtSize(subCodeText, 20) / 2,
+  const codeLabel = codeType === "subCode" ? "Sub Code" : "Lab Code";
+  const codeDisplay = `${codeLabel}: ${codeValue}`;
+  const codeSize = 20;
+  page.drawText(codeDisplay, {
+    x:
+      CENTER_LINE_X -
+      timesBoldFont.widthOfTextAtSize(codeDisplay, codeSize) / 2,
     y,
-    size: 20,
+    size: codeSize,
     font: timesBoldFont,
     color: TEXT_COLOR,
   });
 
   y -= 50;
-
   const subjectText = subject.toUpperCase();
+  const subjectSize = 28;
   page.drawText(subjectText, {
-    x: CENTER_LINE_X - timesBoldFont.widthOfTextAtSize(subjectText, 28) / 2,
+    x:
+      CENTER_LINE_X -
+      timesBoldFont.widthOfTextAtSize(subjectText, subjectSize) / 2,
     y,
-    size: 28,
+    size: subjectSize,
     font: timesBoldFont,
     color: TEXT_COLOR,
   });
 
-  // Logo
   y -= 65;
 
   const LOGO_Y = y - LOGO_HEIGHT;
@@ -155,29 +160,31 @@ const generateSinglePDF = async (
   }
 
   y = LOGO_Y - 75;
-
-  // University
   const universityText = "J. S. UNIVERSITY, SHIKOHABAD";
+  const universitySize = 25;
   page.drawText(universityText, {
-    x: CENTER_LINE_X - timesBoldFont.widthOfTextAtSize(universityText, 25) / 2,
+    x:
+      CENTER_LINE_X -
+      timesBoldFont.widthOfTextAtSize(universityText, universitySize) / 2,
     y,
-    size: 25,
+    size: universitySize,
     font: timesBoldFont,
     color: TEXT_COLOR,
   });
 
   y -= 30;
-
   const sessionText = "Session: 2025-26";
+  const sessionSize = 20;
   page.drawText(sessionText, {
-    x: CENTER_LINE_X - timesBoldFont.widthOfTextAtSize(sessionText, 20) / 2,
+    x:
+      CENTER_LINE_X -
+      timesBoldFont.widthOfTextAtSize(sessionText, sessionSize) / 2,
     y,
-    size: 20,
+    size: sessionSize,
     font: timesBoldFont,
     color: TEXT_COLOR,
   });
 
-  // Submit
   const SUBMISSION_CONTENT_HEIGHT = 100;
   const BOTTOM_MARGIN = 130;
   const SUBMISSION_START_Y =
@@ -188,7 +195,6 @@ const generateSinglePDF = async (
   const VALUE_OFFSET = 100;
 
   let y_left = SUBMISSION_START_Y;
-
   page.drawText("Submitted to", {
     x: SUB_TO_X,
     y: y_left,
@@ -198,7 +204,7 @@ const generateSinglePDF = async (
   });
 
   y_left -= LINE_HEIGHT_SM * 1.5;
-  page.drawText("Pradeep Kumar", {
+  page.drawText(submittedToName, {
     x: SUB_TO_X,
     y: y_left,
     size: 16,
@@ -207,7 +213,7 @@ const generateSinglePDF = async (
   });
 
   y_left -= LINE_HEIGHT_SM;
-  page.drawText("Assistant Professor (CSE)", {
+  page.drawText(submittedToDesignation, {
     x: SUB_TO_X,
     y: y_left,
     size: 14,
@@ -216,7 +222,6 @@ const generateSinglePDF = async (
   });
 
   let y_right = SUBMISSION_START_Y;
-
   page.drawText("Submitted By", {
     x: SUB_BY_X,
     y: y_right,
@@ -233,7 +238,6 @@ const generateSinglePDF = async (
     font: timesFont,
     color: TEXT_COLOR,
   });
-
   page.drawText(name, {
     x: SUB_BY_X + VALUE_OFFSET,
     y: y_right,
@@ -242,56 +246,189 @@ const generateSinglePDF = async (
     color: TEXT_COLOR,
   });
 
+
   y_right -= LINE_HEIGHT_SM;
+    const EnrollmentDisplay = `Enrollment No: ${roll}`;
+    page.drawText(EnrollmentDisplay, {
+      x: SUB_BY_X,
+      y: y_right,
+      size: 14,
+      font: timesFont,
+      color: TEXT_COLOR,
+    });
 
-  page.drawText(`Enrollment No.:`, {
-    x: SUB_BY_X,
-    y: y_right,
-    size: 16,
-    font: timesFont,
-    color: TEXT_COLOR,
-  });
-
-  page.drawText(roll, {
-    x: SUB_BY_X + VALUE_OFFSET,
-    y: y_right,
-    size: 16,
-    font: timesFont,
-    color: TEXT_COLOR,
-  });
+  if (course) {
+    y_right -= LINE_HEIGHT_SM;
+    const courseDisplay = `Course: ${course}`;
+    page.drawText(courseDisplay, {
+      x: SUB_BY_X,
+      y: y_right,
+      size: 14,
+      font: timesFont,
+      color: TEXT_COLOR,
+    });
+  }
 
   const pdfBytes = await pdfDoc.save();
   savePdfToFile(pdfBytes, fileName);
 };
 
-// Component
+// default
+const defaultDetails = [
+  {
+    title: "Assignment File",
+    codeType: "subCode",
+    codeValue: "BTCS-501",
+    subject: "Database Management System",
+    teacher: "Pradeep Kumar",
+    designation: "Assistant Professor (CSE)",
+    course: "",
+  },
+];
+const defaultPreviewData = defaultDetails[0];
+
+// component
 export default function Assignments() {
+  const [isUnlocked, setIsUnlocked] = useState(false);
   const [name, setName] = useState("");
   const [roll, setRoll] = useState("");
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const generateAllPDFs = async () => {
+  const [customTitle, setCustomTitle] = useState("");
+  const [customCodeType, setCustomCodeType] = useState("subCode");
+  const [customCodeValue, setCustomCodeValue] = useState("");
+  const [customSubject, setCustomSubject] = useState("");
+  const [customCourse, setCustomCourse] = useState("");
+  const [customSubmittedToName, setCustomSubmittedToName] = useState("");
+  const [customSubmittedToDesignation, setCustomSubmittedToDesignation] =
+    useState("");
+
+  const isCustomFieldFilled =
+    customTitle ||
+    customCodeValue ||
+    customSubject ||
+    customSubmittedToName ||
+    customSubmittedToDesignation;
+
+  const getPreviewData = () => {
+    if (isCustomFieldFilled) {
+      return {
+        title: customTitle || "Assignment File",
+        codeType: customCodeType,
+        codeValue: customCodeValue || "N/A",
+        subject: customSubject || "CUSTOM SUBJECT",
+        teacher: customSubmittedToName || "Faculty Name",
+        designation: customSubmittedToDesignation || "Designation",
+        course: customCodeType === "labCode" ? customCourse : "",
+      };
+    }
+    return defaultPreviewData;
+  };
+
+  const currentPreview = getPreviewData();
+
+  const checkAccess = () => {
+    const CORRECT_PASSWORD = "s6996";
+    let enteredPassword = prompt(
+      "Please enter the password to view the generator:"
+    );
+    if (enteredPassword === CORRECT_PASSWORD) setIsUnlocked(true);
+    else if (enteredPassword !== null) {
+      alert("Incorrect password. Access denied.");
+      checkAccess();
+    }
+  };
+
+  useEffect(() => {
+    if (!isUnlocked) checkAccess();
+  }, []);
+
+  const generatePDFs = async () => {
     if (!name || !roll) {
-      setError("Please enter both name and roll number.");
+      setError("Please enter both Name and Roll Number (Mandatory fields).");
       return;
     }
     setError("");
     setIsLoading(true);
 
     try {
-      await generateSinglePDF(
-        "Assignment File", "BTCS-501", "Database Management System",
-        "DBMS_Assignment.pdf", name, roll, jsLogo
-      );
-      await generateSinglePDF(
-        "Assignment File", "BTCS-503", "Design & Analysis of Algorithms",
-        "DAA_Assignment.pdf", name, roll, jsLogo
-      );
-      await generateSinglePDF(
-        "Assignment", "BTCS055", "Machine Learning",
-        "ML_Assignment.pdf", name, roll, jsLogo
-      );
+      if (isCustomFieldFilled) {
+        const finalTitle = customTitle || "Assignment File";
+        const finalSubject = customSubject || "CUSTOM SUBJECT";
+        const finalCodeValue = customCodeValue || "N/A";
+        const finalSubmittedToName = customSubmittedToName || "Faculty Name";
+        const finalSubmittedToDesignation =
+          customSubmittedToDesignation || "Designation";
+
+        const safeSubject = finalSubject.replace(/[^a-zA-Z0-9]/g, "_");
+        const safeCode = finalCodeValue.replace(/[^a-zA-Z0-9]/g, "");
+        const finalFileName = `${safeSubject}_${safeCode}_${name}.pdf`;
+        const finalCourse = customCodeType === "labCode" ? customCourse : "";
+
+        await generateSinglePDF(
+          finalTitle,
+          customCodeType,
+          finalCodeValue,
+          finalSubject,
+          finalFileName,
+          name,
+          roll,
+          finalCourse,
+          finalSubmittedToName,
+          finalSubmittedToDesignation,
+          jsLogo
+        );
+      } else {
+        const fullDefaultDetails = [
+          {
+            title: "Assignment File",
+            codeType: "subCode",
+            codeValue: "BTCS-501",
+            subject: "Database Management System",
+            fileName: "DBMS_Assignment.pdf",
+            teacher: "Pradeep Kumar",
+            designation: "Assistant Professor (CSE)",
+            course: "",
+          },
+          {
+            title: "Assignment File",
+            codeType: "subCode",
+            codeValue: "BTCS-503",
+            subject: "Design & Analysis of Algorithms",
+            fileName: "DAA_Assignment.pdf",
+            teacher: "Pradeep Kumar",
+            designation: "Assistant Professor (CSE)",
+            course: "",
+          },
+          {
+            title: "Assignment",
+            codeType: "subCode",
+            codeValue: "BTCS055",
+            subject: "Machine Learning",
+            fileName: "ML_Assignment.pdf",
+            teacher: "Pradeep Kumar",
+            designation: "Assistant Professor (CSE)",
+            course: "",
+          },
+        ];
+
+        for (const defaults of fullDefaultDetails) {
+          await generateSinglePDF(
+            defaults.title,
+            defaults.codeType,
+            defaults.codeValue,
+            defaults.subject,
+            defaults.fileName,
+            name,
+            roll,
+            defaults.course,
+            defaults.teacher,
+            defaults.designation,
+            jsLogo
+          );
+        }
+      }
     } catch (err) {
       setError("Error generating PDF files.");
       console.error(err);
@@ -300,137 +437,191 @@ export default function Assignments() {
     }
   };
 
-  // UI
+  if (!isUnlocked) {
+    return (
+      <div style={{ color: "white", padding: "50px", textAlign: "center" }}>
+        <p>Awaiting password...</p>
+      </div>
+    );
+  }
+
   return (
-    <div>
+    <div className="lg:w-screen">
+    
+    
+      <div className=" header-bar py-5 flex flex-col justify-center items-center mb-4 gap-2  border-b border-gray-900 mt-3">
+        <p className="text-2xl font-bold">JS Front Page Generator</p>
+        <p className="uppercase text-gray-500 mb-5 text-sm lg:text-md">
+          Generate frontpage and download pdf
+        </p>
+      </div>
+      
+    <div className="lg:flex assignmentpage ">
+
+      
+
       <div className="assignment-panel">
-        <h1 className="assignment-title">Assignment PDF Generator</h1>
+        <h1 className="assignment-title">Enter Your Details</h1>
         {error && <div className="assignment-error">{error}</div>}
-        <label className="assignment-label">Name</label>
 
-        <input
-          className="assignment-input"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <label className="assignment-label">Roll Number</label>
+        <div className="input-group">
+          <label className="assignment-label mandatory">Student Name</label>
+          <input
+            className="assignment-input"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
 
-        <input
-          className="assignment-input"
-          value={roll}
-          onChange={(e) => setRoll(e.target.value)}
-        />
+          <label className="assignment-label mandatory">Enrollment No.</label>
+          <input
+            className="assignment-input"
+            value={roll}
+            onChange={(e) => setRoll(e.target.value)}
+          />
+        </div>
+
+        <hr />
+        <h3>Optional Details (Overrides default files)</h3>
+
+        <div className="input-group">
+          <label className="assignment-label">Title</label>
+          <input
+            className="assignment-input"
+            value={customTitle}
+            onChange={(e) => setCustomTitle(e.target.value)}
+          />
+
+          <label className="assignment-label">Subject</label>
+          <input
+            className="assignment-input"
+            value={customSubject}
+            onChange={(e) => setCustomSubject(e.target.value)}
+          />
+        </div>
+
+        <div className="input-group-inline">
+          <div style={{ flex: 1 }}>
+            <label className="assignment-label">Code Type</label>
+            <select
+              className="assignment-input"
+              value={customCodeType}
+              onChange={(e) => setCustomCodeType(e.target.value)}
+            >
+              <option value="subCode">Sub Code</option>
+              <option value="labCode">Lab Code</option>
+            </select>
+          </div>
+          <div style={{ flex: 2, marginLeft: "10px" }}>
+            <label className="assignment-label">Code Value</label>
+            <input
+              className="assignment-input"
+              value={customCodeValue}
+              onChange={(e) => setCustomCodeValue(e.target.value)}
+            />
+          </div>
+        </div>
+
+        {customCodeType === "labCode" && (
+          <div className="input-group">
+            <label className="assignment-label">Course</label>
+            <input
+              className="assignment-input"
+              value={customCourse}
+              onChange={(e) => setCustomCourse(e.target.value)}
+            />
+          </div>
+        )}
+
+        <hr />
+
+        <div className="input-group">
+          <label className="assignment-label">
+            Submitted To (Teacher Name)
+          </label>
+          <input
+            className="assignment-input"
+            value={customSubmittedToName}
+            onChange={(e) => setCustomSubmittedToName(e.target.value)}
+          />
+
+          <label className="assignment-label">Designation</label>
+          <input
+            className="assignment-input"
+            value={customSubmittedToDesignation}
+            onChange={(e) => setCustomSubmittedToDesignation(e.target.value)}
+          />
+        </div>
 
         <button
           className="assignment-btn"
-          onClick={generateAllPDFs}
+          onClick={generatePDFs}
           disabled={isLoading}
         >
-          {isLoading ? "Generating..." : "Download All 3 PDFs"}
+          {isLoading
+            ? "Generating..."
+            : isCustomFieldFilled
+            ? "Download Custom PDF"
+            : "Download All 3 Default PDFs"}
         </button>
       </div>
 
       <div>
-        <div className="preview-wrapper ">
-
-          {/* PREVIEW PAGES LEFT AS-IS, NO COMMENTS REMOVED HERE BECAUSE THEY ARE JSX COMMENTS */}
-
+        <div className="preview-wrapper single-preview">
           <div className="preview-page">
-            <div className="preview-title">ASSIGNMENT FILE</div>
+            <div className="preview-title">
+              {currentPreview.title.toUpperCase()}
+            </div>
             <div className="preview-subtext">ON</div>
-            <div className="preview-subtext">Sub Code: BTCS-501</div>
-            <div className="preview-subject">DATABASE MANAGEMENT SYSTEM</div>
+            <div className="preview-subtext">
+              {currentPreview.codeType === "subCode" ? "Sub Code" : "Lab Code"}:{" "}
+              {currentPreview.codeValue}
+            </div>
+            <div className="preview-subject">
+              {currentPreview.subject.toUpperCase()}
+            </div>
 
-            <br /><br />
-            <center><img src={jsLogo} width="120" alt="University Logo" /></center>
+            <br />
+            <br />
+            <center>
+              <img src={jsLogo} width="120" alt="University Logo" />
+            </center>
             <br />
 
             <div className="preview-subtext">J. S. UNIVERSITY, SHIKOHABAD</div>
             <div className="preview-subtext">Session: 2025-26</div>
 
-            <br /><br />
-            <div className="submitSection">
-              <div className="text-start">
-                <b>Submitted to</b><br />
-                Pradeep Kumar<br />
-                Assistant Professor (CSE)
-              </div>
-
-              <br />
-
-              <div className="text-start">
-                <b>Submitted By</b><br />
-                Student Name: {name || '___'}<br />
-                Enrollment No.: {roll || '___'}
-              </div>
-            </div>
-          </div>
-
-          <div className="preview-page">
-            <div className="preview-title">ASSIGNMENT FILE</div>
-            <div className="preview-subtext">ON</div>
-            <div className="preview-subtext">Sub Code: BTCS-503</div>
-            <div className="preview-subject">DESIGN & ANALYSIS OF ALGORITHMS</div>
-
-            <br /><br />
-            <center><img src={jsLogo} width="120" alt="University Logo" /></center>
+            <br />
             <br />
 
-            <div className="preview-subtext">J. S. UNIVERSITY, SHIKOHABAD</div>
-            <div className="preview-subtext">Session: 2025-26</div>
-
-            <br /><br />
             <div className="submitSection">
               <div className="text-start">
-                <b>Submitted to</b><br />
-                Pradeep Kumar<br />
-                Assistant Professor (CSE)
+                <b>Submitted to</b>
+                <br />
+                {currentPreview.teacher}
+                <br />
+                {currentPreview.designation}
               </div>
 
               <br />
 
               <div className="text-start">
-                <b>Submitted By</b><br />
-                Student Name: {name || '___'}<br />
-                Enrollment No.: {roll || '___'}
+                <b>Submitted By</b>
+                <br />
+                Student Name: {name}
+                <br />
+                Enrollment No: {roll}
+                {currentPreview.course &&
+                  currentPreview.codeType === "labCode" && (
+                    <div style={{ fontSize: "0.85em", marginTop: "5px" }}>
+                      Course: {currentPreview.course}
+                    </div>
+                  )}
               </div>
             </div>
           </div>
-
-          <div className="preview-page">
-            <div className="preview-title">ASSIGNMENT FILE</div>
-            <div className="preview-subtext">ON</div>
-            <div className="preview-subtext">Sub Code: BTCS-055</div>
-            <div className="preview-subject">MACHINE LEARNING</div>
-
-            <br /><br />
-            <center><img src={jsLogo} width="120" alt="University Logo" /></center>
-            <br />
-
-            <div className="preview-subtext">J. S. UNIVERSITY, SHIKOHABAD</div>
-            <div className="preview-subtext">Session: 2025-26</div>
-
-            <br /><br />
-            <div className="submitSection">
-              <div className="text-start">
-                <b>Submitted to</b><br />
-                Pradeep Kumar<br />
-                Assistant Professor (CSE)
-              </div>
-
-              <br />
-
-              <div className="text-start">
-                <b>Submitted By</b><br />
-                Student Name: {name || '___'}<br />
-                Enrollment No.: {roll || '___'}
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
-
+    </div>
     </div>
   );
 }
