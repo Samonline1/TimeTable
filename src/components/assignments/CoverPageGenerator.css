@@ -1,19 +1,55 @@
 /* GLOBAL academic font */
 body {
-    font-family: "Times New Roman", Times, serif;
+    width: 100%;
+    height: 100%;
     letter-spacing: 0.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px 5px 20px;
+    padding-bottom: 50px;
+
 }
+
+/* Hide scrollbar for all browsers */
+* {
+  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none;  /* IE/Edge */
+}
+
+*::-webkit-scrollbar {
+  display: none;             /* Chrome/Safari */
+}
+
 
 /* Container panel */
 .assignment-panel {
-    
-    max-width: 450px;
+        font-family: "Times New Roman", Times, serif;
+
+    max-width: 400px;
     margin: 50px auto;
-    border: 1px solid #ccc;
-    padding: 25px;
+    border: .5px solid #807a7a;
+    padding: 25px 20px 25px 20px;
     border-radius: 10px;
     /* background: white; */
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  background: linear-gradient(90deg, #00080f, #051d33, #010b13);
+  background-size: 300% 300%;
+  animation: morph 12s ease-in-out infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+   
+}
+
+
+
+  
+
+@keyframes morph {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Page title */
@@ -78,4 +114,207 @@ body {
     border-radius: 6px;
     margin-bottom: 15px;
     font-family: "Times New Roman", Times, serif;
+}
+
+
+
+/* visual look pages */
+/*
+|--------------------------------------------------------------------------
+| 1. PREVIEW WRAPPER (Handles Scrolling and Background)
+|--------------------------------------------------------------------------
+*/
+/*
+|--------------------------------------------------------------------------
+| 1. PREVIEW WRAPPER (Handles Scrolling and Background) - REVISED
+|--------------------------------------------------------------------------
+*/
+/*
+|--------------------------------------------------------------------------
+| 1. PREVIEW WRAPPER (Handles Scrolling and Background) - REVISED FOR RESPONSIVENESS
+/*
+|--------------------------------------------------------------------------
+| 1. PREVIEW WRAPPER (Handles Scrolling and Background) - FINAL REVISION
+|--------------------------------------------------------------------------
+*/
+.preview-wrapper {
+    font-family: "Times New Roman", Times, serif;
+    margin-top: 40px;
+    
+    /* Flex settings for layout */
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start; 
+     /* Spacing between pages */
+    
+    /* background: green; */
+    /* REVISED: Set a fixed, large width to guarantee overflow and scrolling */
+    /* Calculation: 3 pages (scaled to 0.8) + 2 gaps (40px) = 
+       3 * (210mm * 0.8) + 2 * 40px = 504mm + 80px (approx 584mm or ~2300px) 
+       Using a generous 2400px ensures scroll on any monitor. */
+    min-width: 200mm;
+    width: 130px; /* Let the content determine the width */
+    height: 200mm; /* Reverted to 140mm as per original code */
+    
+    /* Horizontal Scroll settings remain */
+    overflow-x: auto; 
+        overflow-y: hidden; 
+
+    flex-wrap: nowrap; 
+    padding: 10px;
+}
+
+/*
+|--------------------------------------------------------------------------
+| 2. A4 PAGE STYLES (The Document Itself) - FINAL REVISION
+|--------------------------------------------------------------------------
+*/
+.preview-page {
+    /* CRITICAL: Prevents the A4 page from shrinking */
+    flex-shrink: 0; 
+
+    /* Set dimensions for A4 */
+    width: 210mm;
+    height: 300mm; 
+    
+    background: white;
+    border: 1px solid #848484;
+    border-radius: 4px;
+    padding: 30px 50px; 
+    box-shadow: 0 0 10px #0004;
+    
+    /* DEFAULT SCALE for Desktop/Larger Screens */
+    transform: scale(0.8); 
+    transform-origin: top center;
+    color: black;
+    
+    /* Flex for vertical layout */
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+}
+
+/* --------------------------------------------------------------------- */
+/* RESPONSIVE SCALING USING MEDIA QUERIES (Adjusts page view size, scroll remains) */
+/* --------------------------------------------------------------------- */
+
+/* Apply a smaller scale for Tablets and smaller desktops (Max width 1024px) */
+@media (max-width: 1024px) {
+    .preview-page {
+        transform: scale(0.65); /* Scale down for smaller screens */
+    }
+}
+
+/* Apply the smallest scale for Mobile devices (Max width 600px) */
+@media (max-width: 600px) {
+    .preview-page {
+        transform: scale(0.45); /* Scale down significantly for mobile view */
+    }
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| 3. HEADER TEXT STYLES (Title, Sub Code, Subject)
+|--------------------------------------------------------------------------
+*/
+.preview-title {
+    /* ASSIGNMENT FILE */
+    font-size: 32px; 
+    font-weight: bold;
+    margin-top: 50px; 
+    letter-spacing: 1px;
+}
+
+.preview-subtext {
+    /* ON, Sub Code: BTCS-501 */
+    font-size: 20px;
+    margin-top: 15px; 
+}
+
+.preview-subject {
+    /* DATABASE MANAGEMENT SYSTEM */
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 40px; 
+    letter-spacing: 0.5px;
+}
+
+/*
+|--------------------------------------------------------------------------
+| 4. LOGO, UNIVERSITY, AND SESSION
+|--------------------------------------------------------------------------
+*/
+.preview-logo {
+    /* Placeholder styles for the logo image */
+    margin: 40px auto 30px; 
+    width: 150px; 
+    height: 150px; 
+    background-color: transparent; 
+}
+
+.preview-university {
+    /* J. S. UNIVERSITY, SHIKOHABAD */
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.preview-session {
+    /* Session: 2025-26 */
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| 5. SUBMISSION DETAILS (Bottom Section)
+|--------------------------------------------------------------------------
+*/
+
+/* Container to hold both columns, pushed to the bottom */
+.preview-submission-details {
+    margin-top: auto; 
+    display: flex;
+    justify-content: space-between; 
+    text-align: left; 
+    width: 100%;
+}
+
+.preview-submitted-to,
+.preview-submitted-by {
+    width: 45%; 
+    line-height: 1.5; 
+}
+
+.preview-submitted-by {
+    text-align: right; 
+}
+
+.preview-submission-header {
+    /* Submitted to / Submitted By */
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom: 2px solid black; 
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.preview-submission-name {
+    /* Pradeep Kumar / Student Name */
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.preview-submission-role {
+    /* Assistant Professor (CSE) / Enrollment No. */
+    font-size: 16px;
+    margin-top: 2px;
+}
+
+.submitSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
 }
