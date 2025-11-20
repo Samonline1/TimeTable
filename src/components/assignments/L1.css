@@ -2,6 +2,7 @@
 .l1style {
     letter-spacing: 0.5px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 5px 20px 50px 20px;
@@ -68,6 +69,7 @@
     margin-bottom: 18px;
     background: #ffffff;
     box-sizing: border-box;
+    color: black;
 }
 
 /* BUTTON */
@@ -102,17 +104,20 @@
 
 /* WRAPPER */
 .l1style .preview-wrapper {
+    border: 1px solid  #444141;
+    border-radius: 10px;
+    padding: 10px;
     font-family: "Times New Roman", Times, serif;
-    margin-top: 40px;
+    margin-top: 5px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     max-width: 100mm;
     width: 90%;
-    height: 120mm;
+    height: 140mm;
     overflow-x: auto;
     overflow-y: hidden;
-    flex-wrap: nowrap;
+    
 }
 
 /* PAGE */
@@ -124,7 +129,7 @@
     border: 1px solid #848484;
     border-radius: 4px;
     padding: 30px 50px;
-    box-shadow: 0 0 12px #0005;
+    /* box-shadow: 0 0 12px #0005; */
     transform: scale(0.8);
     transform-origin: top center;
     color: black;
@@ -134,7 +139,21 @@
 }
 
 /* RESPONSIVE */
-@media (max-width: 1024px) {
+@media  (min-width: 651px) and (max-width: 2000px) {
+    .l1style {
+    letter-spacing: 0.5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px 50px 20px;
+}
+
+.l1style .preview-wrapper {
+    display: none;
+    
+}
+
     .l1style .preview-page { transform: scale(0.65); }
 }
 @media (max-width: 600px) {

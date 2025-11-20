@@ -28,6 +28,13 @@ const router = createBrowserRouter([
       <Assignment />
     </div>,
   },
+  {
+    path: "/assignments/:custom",
+    element: 
+    <div>
+      <Assignment />
+    </div>,
+  },
 ]);
 
 export default function App() {

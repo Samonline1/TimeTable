@@ -330,7 +330,7 @@ export default function Assignments() {
         </button>
       </div>
 
-      <div>
+      
         <div className="preview-wrapper ">
 
           {/* PREVIEW PAGES LEFT AS-IS, NO COMMENTS REMOVED HERE BECAUSE THEY ARE JSX COMMENTS */}
@@ -429,7 +429,7 @@ export default function Assignments() {
           </div>
 
         </div>
-      </div>
+      
 
     </div>
   );

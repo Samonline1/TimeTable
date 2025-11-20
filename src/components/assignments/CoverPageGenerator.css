@@ -13,16 +13,23 @@
   border-bottom: 1px solid var(--color-border);
 }
 
+.header-bar {
+    position: relative;
+    z-index: 20;
+}
+
 
 
 .assignmentpage {
+    width: 100%;
     min-height: 100vh;
+    box-sizing: border-box;
     letter-spacing: 0.5px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    padding: 20px;
+    align-items: flex-start;
+    padding: 12px 16px;
     margin: 0;
     color: var(--color-text-light);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -42,9 +49,9 @@
 .assignment-panel {
     max-width: 440px;
     width: 100%;
-    margin: 0 10px 0 auto;
+    margin: 12px auto;
     border: 1px solid var(--color-border);
-    padding: 25px 20px;
+    padding: 18px 16px;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     display: flex;
@@ -181,8 +188,6 @@
     justify-content: center;
     align-items: flex-start;
     max-width: 100vw;
-    overflow-x: hidden;
-    overflow-y: hidden;
     padding: 10px;
     flex-grow: 1;
     font-family: "Times New Roman", Times, serif;
@@ -278,20 +283,20 @@
 
 /* RESPONSIVE */
 @media (min-width: 1200px) {
-    .assignment-page-scope.body {
+    .assignmentpage {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 10px;
-        padding: 40px 0 0 40px;
-        width: 2000px;
+    
+        padding: 10px 80px 0 120px;
+        min-width: 100%;
     }
 
     .assignment-panel {
         max-width: 400px;
         
         position: sticky;
-        top: 40px;
+        
         height: min-content;
     }
 
@@ -307,35 +312,75 @@
     }
 }
 
- @media (max-width: 1000px) {
-   .assignment-page-scope.body {
+@media (max-width: 1000px) {
+    .assignmentpage {
         flex-direction: column;
         display: flex;
+        align-items: center;
+        padding-top: 8px;
     }
 
     .assignment-panel {
-        max-width: 100%;
-        padding: 20px ;
+        max-width: 96%;
+        padding: 16px;
+        margin: 10px auto;
     }
 
-    .preview-wrapper,
-    .preview-page {
-        display: none;
+    .preview-wrapper {
+        max-width: 100%;
     }
-} 
+}
 
 @media (max-width: 650px) {
-    .assignment-page-scope.body {
+    .assignmentpage {
         flex-direction: column;
+        display: flex;
+        align-items: center;
+        padding: 8px 12px;
+        margin: 0;
     }
 
     .assignment-panel {
-        max-width: 100%;
-        padding: 20px ;
+        max-width: 98%;
+        padding: 14px;
+        margin: 8px auto;
     }
 
     .preview-wrapper,
     .preview-page {
         display: none;
+    }
+}
+
+/* MID-SCREEN: tablets / small laptops - center vertically and place preview above inputs */
+@media (min-width: 651px) and (max-width: 1199px) {
+    .assignmentpage {
+        min-height: calc(100vh - 120px);
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 12px;
+         max-width: 900px;
+    }
+
+    /* show preview first */
+    .preview-wrapper {
+        order: -1;
+        margin-bottom: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 900px;
+    }
+
+    .preview-page {
+        transform: scale(0.95);
+        transform-origin: center;
+    }
+
+    .assignment-panel {
+        order: 0;
+        margin: 8px auto;
+ max-width: 900px;        width: 95%;
     }
 }

@@ -15,18 +15,59 @@ const savePdfToFile = (pdfBytes, fileName) => {
 };
 
 const urlToBase64 = async (url) => {
-  const response = await fetch(url);
-  if (!response.ok)
-    throw new Error(
-      `Failed to fetch image: ${response.status} ${response.statusText}`
-    );
-  const blob = await response.blob();
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onloadend = () => resolve(reader.result);
-    reader.onerror = reject;
-    reader.readAsDataURL(blob);
-  });
+  if (!url) throw new Error("No image URL provided");
+
+  // If it's already a data URL, return as-is
+  if (typeof url === "string" && url.startsWith("data:")) return url;
+
+  // If it's a Blob/File already, convert with FileReader
+  if (typeof Blob !== "undefined" && url instanceof Blob) {
+    return await new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onloadend = () => resolve(reader.result);
+      reader.onerror = reject;
+      reader.readAsDataURL(url);
+    });
+  }
+
+  // Try fetching normally first
+  try {
+    const response = await fetch(url);
+    if (!response.ok)
+      throw new Error(`Failed to fetch image: ${response.status} ${response.statusText}`);
+    const blob = await response.blob();
+    return await new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onloadend = () => resolve(reader.result);
+      reader.onerror = reject;
+      reader.readAsDataURL(blob);
+    });
+  } catch (fetchErr) {
+    // Fallback: attempt to load the image into a canvas and extract data URL
+    try {
+      return await new Promise((resolve, reject) => {
+        const img = new Image();
+        img.crossOrigin = "anonymous";
+        img.onload = () => {
+          try {
+            const canvas = document.createElement("canvas");
+            canvas.width = img.naturalWidth || img.width;
+            canvas.height = img.naturalHeight || img.height;
+            const ctx = canvas.getContext("2d");
+            ctx.drawImage(img, 0, 0);
+            const dataUrl = canvas.toDataURL("image/png");
+            resolve(dataUrl);
+          } catch (err) {
+            reject(err);
+          }
+        };
+        img.onerror = () => reject(new Error("Image load failed in fallback"));
+        img.src = url;
+      });
+    } catch (fallbackErr) {
+      throw fetchErr;
+    }
+  }
 };
 
 const embedImageFromDataUrl = async (pdfDoc, dataUrl) => {
@@ -446,7 +487,7 @@ export default function Assignments() {
   }
 
   return (
-    <div className="lg:w-screen">
+    <div className="w-full">
     
     
       <div className=" header-bar py-5 flex flex-col justify-center items-center mb-4 gap-2  border-b border-gray-900 mt-3">
@@ -456,7 +497,7 @@ export default function Assignments() {
         </p>
       </div>
       
-    <div className="lg:flex assignmentpage ">
+    <div className="assignmentpage flex flex-col lg:flex-row items-start lg:items-center justify-center w-full">
 
       
 
@@ -481,7 +522,7 @@ export default function Assignments() {
         </div>
 
         <hr />
-        <h3>Optional Details (Overrides default files)</h3>
+        <h3>Optional Details</h3>
 
         <div className="input-group">
           <label className="assignment-label">Title</label>
