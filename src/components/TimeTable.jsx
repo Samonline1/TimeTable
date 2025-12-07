@@ -3,7 +3,9 @@ import { useNavigate, useParams } from "react-router-dom";
 import examData from "../data/datesheet.json";
 import Calendar from "./Calender";
 import { motion } from "framer-motion";
-import History from "./History";
+import { FaExternalLinkAlt } from "react-icons/fa";
+import { MdCancel } from "react-icons/md";
+
 
 const TimeTable = () => {
     const navigate = useNavigate();
@@ -74,7 +76,7 @@ const TimeTable = () => {
 
     const showDetails = (code, phase, color) => {
         setShowInfo(true);
-        const details = semester.subjects.find((subject) => subject.code === code);
+        const details = semester?.subjects?.find((subject) => subject.code === code);
         setSubject(details);
         setExtra({ phase, color });
     };
@@ -82,7 +84,7 @@ const TimeTable = () => {
     const findSub = (date) => {
         const dayNum = Number(date);
 
-        const details = semester.subjects.find((subject) => {
+        const details = semester?.subjects?.find((subject) => {
             const subDay = Number(subject.Date?.split("-")[2]);
             return subDay === dayNum;
         });
@@ -106,20 +108,25 @@ const TimeTable = () => {
     }, []);
 
     const IntroAnimation = () => (
-        <div className="flex items-center justify-center h-screen w-screen bg-gray-950">
-            <motion.div
-                className="h-15 w-15 rounded-full backdrop-blur-xl bg-white/10 border border-white/20 shadow-[0_8px_32px_rgba(255,255,255,0.1)] flex items-center justify-center"
-                initial={{ scale: 0.7, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-            >
-                <motion.div
-                    className="h-10 w-10 rounded-full border-4 border-white/20 border-t-white"
-                    animate={{ rotate: 360 }}
-                    transition={{ repeat: Infinity, duration: 0.9, ease: "linear" }}
-                />
-            </motion.div>
-        </div>
+       <div className="flex items-center justify-center h-screen w-screen bg-gray-950">
+  <div className="flex space-x-2">
+    {[0, 0.2, 0.4].map((d, i) => (
+      <motion.div
+        key={i}
+        className="h-10 w-2 bg-white/40 rounded-full"
+        animate={{ scaleY: [1, 2, 1] }}
+        transition={{
+          repeat: Infinity,
+          duration: 1,
+          delay: d,
+          ease: "easeInOut",
+        }}
+      />
+    ))}
+  </div>
+</div>
+
+
     );
 
     return (
@@ -135,7 +142,7 @@ const TimeTable = () => {
                     <div className="h-screen w-screen lg:w-full bg-gray-950 text-white p-3 flex flex-col items-center pb-5">
                         <div className="flex flex-col justify-center items-center mb-4 p-5 gap-2 border-b border-gray-800 w-full">
                             <p className="text-2xl font-bold" onClick={() => navigate(`/`)}>
-                                JS Exam Time Table
+                                JSU Exam Time Table
                             </p>
                             <p className="uppercase text-gray-500  text-sm lg:text-md mb-3">
                                 Odd Semster examination 2025-2026
@@ -148,9 +155,10 @@ const TimeTable = () => {
                                 <div className="relative w-full max-w-sm bg-gray-900 rounded-xl p-5 shadow-lg">
                                     <p
                                         onClick={() => setShowInfo(false)}
-                                        className="absolute top-4 right-4 text-xl text-gray-400 hover:text-white popupbtn"
+                                        className="absolute top-4 right-4 text-xl text-gray-400 hover:text-red-500 hover:scale-110  popupbtn"
                                     >
-                                        ✕
+                                        <MdCancel />
+
                                     </p>
 
                                     {subject ? (
@@ -211,27 +219,27 @@ const TimeTable = () => {
                             <div className="flex gap-2 overflow-x-auto no-scrollbar w-[99.9%] lg:w-[80%]">
                                 <Calendar
                                     year={2025}
-                                    month={10}
-                                    examDate={semester.subjects.map((d) => d.Date)}
-                                    CalDate={findSub}
-                                />
-                                <Calendar
-                                    year={2025}
-                                    month={11}
-                                    examDate={semester.subjects.map((d) => d.Date)}
-                                    CalDate={findSub}
-                                />
-                                <Calendar
-                                    year={2025}
                                     month={12}
-                                    examDate={semester.subjects.map((d) => d.Date)}
+                                    examDate={semester?.subjects?.map((d) => d.Date)}
+                                    CalDate={findSub}
+                                />
+                                <Calendar
+                                    year={2026}
+                                    month={1}
+                                    examDate={semester?.subjects?.map((d) => d.Date)}
+                                    CalDate={findSub}
+                                />
+                                <Calendar
+                                    year={2026}
+                                    month={2}
+                                    examDate={semester?.subjects?.map((d) => d.Date)}
                                     CalDate={findSub}
                                 />
                             </div>
 
                             {/* ============ SUBJECT LIST ============ */}
                             <div className="lg:w-[80%] h-90 w-full overflow-y-auto no-scrollbar space-y-2 ">
-                                {semester.subjects.map((subject, index) => {
+                                {semester?.subjects?.map((subject, index) => {
                                     const { days, hours, minutes, seconds, phase, color } =
                                         getRemainingTime(subject);
 
@@ -297,7 +305,17 @@ const TimeTable = () => {
                                 >
                                     History
                                 </a>
+                                
                             </div>
+                           <div className="w-full lg:w-[80%] flex justify-center items-center mt-5 pb-5 hover:scale-105 transition-all ">
+                                            <a
+                      href="https://www.instagram.com/jsulabs"
+                      className=" flex  justify-center w-full  p-1  rounded-xl text-gray-800 font-semibold tracking-wide hover:text-blue-400 text-gray-500 transition text-sm"
+                    >
+                      Built by @JsuLabs <span className="px-2 flex  justify-center items-center "><FaExternalLinkAlt />
+</span>
+                    </a>
+                                        </div>
                         </div>
                     </div>
                 </motion.div>

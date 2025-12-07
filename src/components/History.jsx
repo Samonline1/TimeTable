@@ -1,6 +1,7 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { FaExternalLinkAlt } from "react-icons/fa";
+
 
 const History = () => {
     const storedData = JSON.parse(localStorage.getItem("studentData")) || [];
@@ -21,11 +22,11 @@ const History = () => {
                      
                       p-2 lg:h-[70vh] h-135 overflow-y-auto no-scrollbar"
             >
-                {storedData.length === 0 ? (
+                {storedData?.length === 0 ? (
                     <p className="text-gray-500 text-center py-6">No history found.</p>
                 ) : (
                     <div className="flex flex-col gap-4">
-                        {storedData.map((item, index) => (
+                        {storedData?.reverse().map((item, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 10 }}
@@ -82,6 +83,15 @@ const History = () => {
                     History
                 </a>
             </div>
+            <div className="w-full lg:w-[80%] flex justify-center items-center mt-10 pb-5 hover:scale-105 transition-all ">
+                                            <a
+                      href="https://www.instagram.com/jsulabs"
+                      className=" flex  justify-center w-full  p-1  rounded-xl text-gray-800 font-semibold tracking-wide hover:text-blue-400 text-gray-500 transition text-sm"
+                    >
+                      Built by @JsuLabs <span className="px-2 flex  justify-center items-center "><FaExternalLinkAlt />
+</span>
+                    </a>
+                                        </div>
         </div>
     );
 };

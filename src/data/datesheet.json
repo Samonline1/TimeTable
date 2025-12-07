@@ -1,147 +1,235 @@
 {
   "courses": [
     {
+      "id": "bsc_ag",
+      "name": "B.Sc. (Agriculture)",
+      "branches": [
+        {
+          "id": "agriculture",
+          "name": "Agriculture",
+          "semesters": [
+            {
+              "id": "5",
+              "subjects": [
+                { "code": "AG-501", "name": "Rainfed and Dryland Agriculture", "Date": "2025-12-15", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "AG-502", "name": "Crop Improvement-1 Kharif Crops", "Date": "2025-12-16", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "AG-503", "name": "Pests of Crops and Stored Grain and Their Management", "Date": "2025-12-17", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "AG-504", "name": "Agricultural Marketing Trade & Prices", "Date": "2025-12-17", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "AG-505", "name": "Protected Cultivation and Secondary Agriculture", "Date": "2025-12-19", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "AG-506", "name": "Diseases of Field and Horticultural Crops and Their Management-1", "Date": "2025-12-20", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "AG-507", "name": "Production Technology For Fruit and Plantation Crops", "Date": "2025-12-22", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "AG-508", "name": "Communication Skills and Personality Development", "Date": "2025-12-23", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "AG-509", "name": "Intellectual Property Rights", "Date": "2025-12-24", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "AG-510", "name": "Principles of Food Science & Nutrition", "Date": "2025-12-26", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "AG-511", "name": "Geo-Informatics and Nanotechnology", "Date": "2025-12-26", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "AGE-56", "name": "Biopesticides & Biofertilizers", "Date": "2025-12-30", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            },
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "AG-301", "name": "Crop Production Technology-1 (Kharif Crops)", "Date": "2025-12-15", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "AG-303", "name": "Fundamentals of Plant Breeding", "Date": "2025-12-16", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "AG-304", "name": "Agricultural Microbiology", "Date": "2025-12-17", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "AG-305", "name": "Agricultural Finance & Co-Operation", "Date": "2025-12-17", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "AG-306", "name": "Farm Machinery & Power", "Date": "2025-12-19", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "AG-307", "name": "Principles of Integrated Disease Management", "Date": "2025-12-20", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "AG-308", "name": "Environmental Studies & Disaster Management", "Date": "2025-12-22", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "AG-309", "name": "Statistical Methods", "Date": "2025-12-23", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "AG-310", "name": "Fundamental of Soil & Water Conservation", "Date": "2025-12-24", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "AG-311", "name": "Dairy Science", "Date": "2025-12-26", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "AG-312", "name": "Fundamentals of Entomology-II", "Date": "2025-12-29", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "btech",
       "name": "Bachelor of Technology",
       "branches": [
+        {
+          "id": "ce",
+          "name": "Civil Engineering",
+          "semesters": [
+            {
+              "id": "5",
+              "subjects": [
+                { "code": "BTNC501", "name": "Constitution of India, Law and Engineering", "Date": "2025-12-15", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTCE501", "name": "Geotechnical Engineering", "Date": "2025-12-16", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTCE502", "name": "Structural Analysis", "Date": "2025-12-17", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTCE503", "name": "Quantity Estimation and Construction Management", "Date": "2025-12-17", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTCE051", "name": "Concrete Technology", "Date": "2025-12-19", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTCE055", "name": "Engineering Hydrology", "Date": "2025-12-20", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            },
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "BTAS303", "name": "Mathematics-III", "Date": "2025-12-15", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BTAS301", "name": "Technical Communication", "Date": "2025-12-16", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BTNC301", "name": "Computer System Security", "Date": "2025-12-17", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BTCE301", "name": "Engg. Mechanics", "Date": "2025-12-17", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BTCE302", "name": "Surveying and Geomatics", "Date": "2025-12-19", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BTCE303", "name": "Fluid Mechanics", "Date": "2025-12-20", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" }
+              ]
+            },
+            {
+              "id": "7",
+              "subjects": [
+                { "code": "BTHU701", "name": "Rural Development: Administration and Planning", "Date": "2025-12-15", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTOE071", "name": "Renewable Energy Resources", "Date": "2025-12-16", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTCE070", "name": "Railway, Waterway and Airway Engineering", "Date": "2025-12-17", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTCE078", "name": "Irrigation and Water Resource Engineering", "Date": "2025-12-18", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            }
+          ]
+        },
         {
           "id": "cse",
           "name": "Computer Science Engineering",
           "semesters": [
             {
-              "id": "1",
+              "id": "5",
               "subjects": [
-                {
-                  "code": "PHY101",
-                  "name": "Engineering Physics",
-                  "Date": "2025-11-13",
-                  "startTime": "2:30 PM",
-                  "endTime": "5:55 PM",
-                  "shift": "M",
-                  "paper": "1st"
-                },
-                {
-                  "code": "MTH101",
-                  "name": "Calculus",
-                  "Date": "2025-11-14",
-                  "startTime": "1:30 PM",
-                  "endTime": "3:30 PM",
-                  "shift": "E",
-                  "paper": "2nd"
-                },
-                {
-                  "code": "CSE101",
-                  "name": "Programming in C",
-                  "Date": "2025-12-25",
-                  "startTime": "1:30 PM",
-                  "endTime": "3:30 PM",
-                  "shift": "M",
-                  "paper": "3rd"
-                },
-                {
-                  "code": "PHY101",
-                  "name": "Engineering Physics",
-                  "Date": "2025-11-20",
-                  "startTime": "1:30 PM",
-                  "endTime": "3:30 PM",
-                  "shift": "E"
-                },
-                {
-                  "code": "MTH101",
-                  "name": "Calculus",
-                  "Date": "2025-11-14",
-                  "startTime": "1:30 PM",
-                  "endTime": "3:30 PM",
-                  "shift": "M"
-                },
-                {
-                  "code": "CSE101",
-                  "name": "Programming in C",
-                  "Date": "2025-12-25",
-                  "startTime": "1:30 PM",
-                  "endTime": "3:30 PM",
-                  "shift": "M"
-                },
-                {
-                  "code": "CSE101",
-                  "name": "Programming in C",
-                  "Date": "2025-12-25",
-                  "startTime": "1:30 PM",
-                  "endTime": "3:30 PM",
-                  "shift": "E"
-                },
-                {
-                  "code": "PHY101",
-                  "name": "Engineering Physics",
-                  "Date": "2025-11-20",
-                  "startTime": "1:30 PM",
-                  "endTime": "3:30 PM",
-                  "shift": "M"
-                },
-                {
-                  "code": "MTH101",
-                  "name": "Calculus",
-                  "Date": "2025-11-14",
-                  "startTime": "1:30 PM",
-                  "endTime": "3:30 PM",
-                  "shift": "M"
-                },
-                {
-                  "code": "CSE101",
-                  "name": "Programming in C",
-                  "Date": "2025-12-25",
-                  "startTime": "1:30 PM",
-                  "endTime": "3:30 PM",
-                  "shift": "M"
-                }
+                { "code": "BTNC501", "name": "Constitution of India, Law and Engineering", "Date": "2025-12-15", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTCS501", "name": "Database Management System", "Date": "2025-12-16", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTCS502", "name": "Compiler Design", "Date": "2025-12-17", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTCS503", "name": "Design and Analysis of Algorithm", "Date": "2025-12-17", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTCS052", "name": "Web Designing", "Date": "2025-12-19", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTCS055", "name": "Machine Learning Techniques", "Date": "2025-12-20", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
               ]
             },
             {
-              "id": "2",
+              "id": "3",
               "subjects": [
-                {
-                  "code": "CSE201",
-                  "name": "Data Structures",
-                  "Date": "2025-12-20",
-                  "startTime": "1:30 PM",
-                  "endTime": "3:30 PM",
-                  "shift": "E"
-                },
-                {
-                  "code": "CSE202",
-                  "name": "Discrete Mathematics",
-                  "Date": "2025-12-20",
-                  "startTime": "1:30 PM",
-                  "endTime": "3:30 PM",
-                  "shift": "M"
-                }
+                { "code": "BTAS302", "name": "Mathematics-IV", "Date": "2025-12-15", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BTAS301", "name": "Technical Communication", "Date": "2025-12-16", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BTNC301", "name": "Computer System Security", "Date": "2025-12-17", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BTCS301", "name": "Data Structure", "Date": "2025-12-17", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BTCS302", "name": "Computer Organization and Architecture", "Date": "2025-12-19", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BTCS303", "name": "Discrete Structures & Theory of Logic", "Date": "2025-12-20", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" }
+              ]
+            },
+            {
+              "id": "7",
+              "subjects": [
+                { "code": "BTHU701", "name": "Rural Development: Administration and Planning", "Date": "2025-12-15", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTOE071", "name": "Renewable Energy Resources", "Date": "2025-12-16", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTCS071", "name": "Artificial Intelligence", "Date": "2025-12-17", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTCS712", "name": "Internet of Things", "Date": "2025-12-18", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
               ]
             }
           ]
         },
         {
           "id": "ece",
-          "name": "Electronics and Communication",
+          "name": "Electronics & Communication Engineering",
           "semesters": [
             {
-              "id": "1",
+              "id": "5",
               "subjects": [
-                {
-                  "code": "PHY101",
-                  "name": "Engineering Physics",
-                  "Date": "2025-10-4",
-                  "startTime": "1:30 PM",
-                  "endTime": "3:30 PM",
-                  "shift": "E"
-                },
-                {
-                  "code": "ECE101",
-                  "name": "Basic Electronics",
-                  "Date": "2025-10-4",
-                  "startTime": "1:30 PM",
-                  "endTime": "3:30 PM",
-                  "shift": "M"
-                }
+                { "code": "BTNC501", "name": "Constitution of India, Law and Engineering", "Date": "2025-12-15", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTEC501", "name": "Integrated Circuits", "Date": "2025-12-16", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTEC502", "name": "Microprocessor & Microcontroller", "Date": "2025-12-17", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTEC503", "name": "Digital Signal Processing", "Date": "2025-12-17", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTEC052", "name": "Industrial Electronics", "Date": "2025-12-19", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTEC058", "name": "Optical Comm.", "Date": "2025-12-20", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            },
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "BTAS302", "name": "Mathematics-IV", "Date": "2025-12-15", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BTAS301", "name": "Technical Communication", "Date": "2025-12-16", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BTNC301", "name": "Computer System Security", "Date": "2025-12-17", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BTEC301", "name": "Electronic Devices", "Date": "2025-12-17", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BTEC302", "name": "Digital System Design", "Date": "2025-12-19", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BTEC303", "name": "Network Analysis & Synth.", "Date": "2025-12-20", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" }
+              ]
+            },
+            {
+              "id": "7",
+              "subjects": [
+                { "code": "BTHU701", "name": "Rural Development: Administration and Planning", "Date": "2025-12-15", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTOE071", "name": "Renewable Energy Resources", "Date": "2025-12-16", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTEC074", "name": "Microwave & Radar Engineering", "Date": "2025-12-17", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTEC076", "name": "Wireless & Mobile Communication", "Date": "2025-12-18", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ee",
+          "name": "Electrical Engineering",
+          "semesters": [
+            {
+              "id": "5",
+              "subjects": [
+                { "code": "BTNC501", "name": "Constitution of India, Law and Engineering", "Date": "2025-12-15", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTEE501", "name": "Power System-1", "Date": "2025-12-16", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTEE502", "name": "Control System", "Date": "2025-12-17", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTEE503", "name": "Electrical Machines-II", "Date": "2025-12-17", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTEE052", "name": "Sensors and Transducers", "Date": "2025-12-19", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTEE058", "name": "Analog & Digital Comm.", "Date": "2025-12-20", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            },
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "BTAS302", "name": "Mathematics-IV", "Date": "2025-12-15", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BTAS301", "name": "Technical Communication", "Date": "2025-12-16", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BTNC301", "name": "Computer System Security", "Date": "2025-12-17", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BTEE301", "name": "Electromagnetic Field Theory", "Date": "2025-12-17", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BTEE302", "name": "Electrical Measure. & Instrumentation", "Date": "2025-12-19", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BTEE303", "name": "Basic Signals & Systems", "Date": "2025-12-20", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" }
+              ]
+            },
+            {
+              "id": "7",
+              "subjects": [
+                { "code": "BTHU701", "name": "Rural Development: Administration and Planning", "Date": "2025-12-15", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTOE071", "name": "Renewable Energy Resources", "Date": "2025-12-16", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTEE071", "name": "Energy Conservation and Auditing", "Date": "2025-12-17", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTEE075", "name": "Electric Drives", "Date": "2025-12-18", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "me",
+          "name": "Mechanical Engineering",
+          "semesters": [
+            {
+              "id": "5",
+              "subjects": [
+                { "code": "BTNC501", "name": "Constitution of India, Law and Engineering", "Date": "2025-12-15", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTME501", "name": "Heat and Mass Transfer", "Date": "2025-12-16", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTME502", "name": "Strength of Material", "Date": "2025-12-17", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTME503", "name": "Industrial Engineering", "Date": "2025-12-17", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTAU051", "name": "Automobile Engines & Combustion", "Date": "2025-12-19", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTME055", "name": "Advance Welding", "Date": "2025-12-20", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            },
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "BTAS302", "name": "Mathematics-IV", "Date": "2025-12-15", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BTAS301", "name": "Technical Communication", "Date": "2025-12-16", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BTNC301", "name": "Computer System Security", "Date": "2025-12-17", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BTME301", "name": "Thermodynamics", "Date": "2025-12-17", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BTME302", "name": "Fluid Mechanics & Fluid Machines", "Date": "2025-12-19", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BTME303", "name": "Materials Engineering", "Date": "2025-12-20", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" }
+              ]
+            },
+            {
+              "id": "7",
+              "subjects": [
+                { "code": "BTHU701", "name": "Rural Development: Administration and Planning", "Date": "2025-12-15", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTOE071", "name": "Renewable Energy Resources", "Date": "2025-12-16", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTME071", "name": "Additive Manufacturing", "Date": "2025-12-17", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BTME077", "name": "Power Plant Engineering", "Date": "2025-12-18", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
               ]
             }
           ]
@@ -154,54 +242,654 @@
       "branches": [
         {
           "id": "core",
-          "name": "Core BCA",
+          "name": "Core",
           "semesters": [
             {
-              "id": "1",
+              "id": "3",
               "subjects": [
-                {
-                  "code": "BCA101",
-                  "name": "Computer Fundamentals",
-                  "Date": "2025-10-4",
-                  "startTime": "1:30 PM",
-                  "endTime": "3:30 PM",
-                  "shift": "E"
-                },
-                {
-                  "code": "BCA102",
-                  "name": "C Programming",
-                  "Date": "2025-11-25",
-                  "startTime": "1:30 PM",
-                  "endTime": "3:30 PM",
-                  "shift": "M"
-                }
+                { "code": "BCA-31", "name": "Object Oriented Programming Using C++", "Date": "2025-12-16", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BCA-32", "name": "Data Structure Using C & C++", "Date": "2025-12-16", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BCA-33", "name": "Computer Architecture & Assembly Language", "Date": "2025-12-17", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BCA-34", "name": "Business Economics", "Date": "2025-12-18", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BCA-35", "name": "Elements of Statistics", "Date": "2025-12-19", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" }
+              ]
+            },
+            {
+              "id": "5",
+              "subjects": [
+                { "code": "BCA-51", "name": "Introduction to DBMS", "Date": "2025-12-16", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BCA-52", "name": "Java Programming and Dynamic Webpage Design", "Date": "2025-12-16", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BCA-53", "name": "Computer Network", "Date": "2025-12-17", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BCA-54", "name": "Numerical Methods", "Date": "2025-12-18", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mba",
+      "name": "Master of Business Administration",
+      "branches": [
+        {
+          "id": "core",
+          "name": "Core",
+          "semesters": [
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "MBA301", "name": "Strategic Management", "Date": "2025-12-15", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "MBA302", "name": "Innovation & Entrepreneurship", "Date": "2025-12-16", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "MAC301", "name": "Universal Human Values & Professional Ethics", "Date": "2025-12-17", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
               ]
             }
           ]
         },
         {
-          "id": "core",
-          "name": "Core BCA",
+          "id": "hr",
+          "name": "Human Resources",
           "semesters": [
             {
-              "id": "1",
+              "id": "3",
               "subjects": [
-                {
-                  "code": "BCA101",
-                  "name": "Computer Fundamentals",
-                  "Date": "2025-11-23",
-                  "startTime": "1:30 PM",
-                  "endTime": "3:30 PM",
-                  "shift": "M"
-                },
-                {
-                  "code": "BCA102",
-                  "name": "C Programming",
-                  "Date": "2025-12-29",
-                  "startTime": "1:30 PM",
-                  "endTime": "3:30 PM",
-                  "shift": "E"
-                }
+                { "code": "MBAHR01", "name": "Talent Management", "Date": "2025-12-18", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "MBAHR02", "name": "Employee Relations and Labour Laws", "Date": "2025-12-19", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "marketing",
+          "name": "Marketing",
+          "semesters": [
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "BAMK01", "name": "Consumer Behaviour & Marketing Communication", "Date": "2025-12-20", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "MBAMK02", "name": "Marketing Analytics", "Date": "2025-12-22", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "finance",
+          "name": "Finance",
+          "semesters": [
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "MBAFM01", "name": "Investment Analysis & Portfolio Management", "Date": "2025-12-23", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "MBAFM02", "name": "Financial Planning & Tax Management", "Date": "2025-12-24", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "it",
+          "name": "Information Technology",
+          "semesters": [
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "MBAIT01", "name": "Data Anaytics For Business Decisions", "Date": "2025-12-24", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "MBAIT02", "name": "AI & ML for Business", "Date": "2025-12-26", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "diploma",
+      "name": "Diploma in Engineering",
+      "branches": [
+        {
+          "id": "ce",
+          "name": "Civil Engineering",
+          "semesters": [
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "DCE-31", "name": "Hydraulics & Hydraulic Machines", "Date": "2025-12-22", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "DAS-31", "name": "Environmental Studies", "Date": "2025-12-23", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "DCE-32", "name": "Concrete Technology", "Date": "2025-12-24", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "DCE-33", "name": "Structural Mechanics", "Date": "2025-12-26", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "DCE-34", "name": "Building Construction", "Date": "2025-12-29", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "DCE-35", "name": "Building Drawings", "Date": "2025-12-30", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            },
+            {
+              "id": "5",
+              "subjects": [
+                { "code": "DCE-51", "name": "Water and Waste Water Engineering", "Date": "2025-12-22", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "DCE-52", "name": "Railways, Bridges and Tunnels", "Date": "2025-12-23", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "DCE-53", "name": "Earthquake Engineering", "Date": "2025-12-24", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "DCE-54", "name": "Soil Mechanics and Foundation Engineering", "Date": "2025-12-24", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "DCE-55", "name": "Surveying-II", "Date": "2025-12-29", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "DCE-56", "name": "Waste Water and Irrigation Engineering Drawing", "Date": "2025-12-30", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "me",
+          "name": "Mechanical Engineering",
+          "semesters": [
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "DAS-32", "name": "Applied Mathematics-III", "Date": "2025-12-22", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "DME-31", "name": "Engineering Materials", "Date": "2025-12-23", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "DME-32", "name": "Mechanics of Solids", "Date": "2025-12-24", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "DME-33", "name": "Thermal Engineering", "Date": "2025-12-26", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "DME-35", "name": "Workshop Technology", "Date": "2025-12-29", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            },
+            {
+              "id": "5",
+              "subjects": [
+                { "code": "DIM-51", "name": "Industrial Management and Entrepreneurship Development", "Date": "2025-12-22", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "DME-51", "name": "Theory of Machines", "Date": "2025-12-23", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "DME-52", "name": "Machine Design", "Date": "2025-12-24", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "DME-53", "name": "Production Technology", "Date": "2025-12-26", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "DME-54", "name": "Production Management", "Date": "2025-12-29", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "DME-55", "name": "Automobile Engineering", "Date": "2025-12-30", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ee",
+          "name": "Electrical Engineering",
+          "semesters": [
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "DAS-32", "name": "Applied Mathematics-III", "Date": "2025-12-22", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "DAS-31", "name": "Environmental Studies", "Date": "2025-12-23", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "DEE-31", "name": "Electrical Instrumentation & Measur.", "Date": "2025-12-24", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "DEE-32", "name": "Electrical Engineering -II", "Date": "2025-12-24", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "DEE-33", "name": "Electrical & Electronics Engineering Materials", "Date": "2025-12-26", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "DEE-34", "name": "Electrical Machine -1", "Date": "2025-12-30", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            },
+            {
+              "id": "5",
+              "subjects": [
+                { "code": "DIM-51", "name": "Industrial Management and Entrepreneurship Development", "Date": "2025-12-22", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "DEE-51", "name": "Switchgear and Protection", "Date": "2025-12-23", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "DEE-52", "name": "PLC, Microcontroller and SCADA", "Date": "2025-12-24", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "DEE-53", "name": "Electrical Machine - II", "Date": "2025-12-26", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "DEE-01", "name": "Renewable Sources of Energy", "Date": "2025-12-29", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ec",
+          "name": "Electronics Engineering",
+          "semesters": [
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "DAS-32", "name": "Applied Mathematics-III", "Date": "2025-12-22", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "DAS-31", "name": "Environmental Studies", "Date": "2025-12-23", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "DEC-32", "name": "Electronic Devices and Circuits", "Date": "2025-12-26", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "DEC-31", "name": "Digital Electronics", "Date": "2025-12-29", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            },
+            {
+              "id": "5",
+              "subjects": [
+                { "code": "DIM-51", "name": "Industrial Management and Entrepreneurship Development", "Date": "2025-12-22", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "DEC-51", "name": "Microprocessors", "Date": "2025-12-23", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "DEC-52", "name": "Optical Fiber Comm.", "Date": "2025-12-24", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "DEC-53", "name": "Consumer Electronics", "Date": "2025-12-26", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "DEC-54", "name": "Programming in C", "Date": "2025-12-29", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs",
+          "name": "Computer Science",
+          "semesters": [
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "DAS-32", "name": "Applied Mathematics-III", "Date": "2025-12-22", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "DAS-31", "name": "Environmental Studies", "Date": "2025-12-23", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "DCS-31", "name": "Internet & Web Tech.", "Date": "2025-12-24", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "DCS-32", "name": "Data Communication and Computer Networks", "Date": "2025-12-26", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "DCS-33", "name": "Data Structure Using C", "Date": "2025-12-30", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            },
+            {
+              "id": "5",
+              "subjects": [
+                { "code": "DCS-51", "name": "Software Engineering", "Date": "2025-12-22", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "DCS-52", "name": "Web Development using PHP", "Date": "2025-12-23", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "DCS-53", "name": "Computer Programming using Python", "Date": "2025-12-24", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "DCS-54", "name": "Computer Architecture and Hardware Maintenance", "Date": "2025-12-26", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "DCS-55", "name": "Internet of Things", "Date": "2025-12-29", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mca",
+      "name": "Master of Computer Applications",
+      "branches": [
+        {
+          "id": "core",
+          "name": "Core",
+          "semesters": [
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "MCA-31", "name": "Artificial Intelligence", "Date": "2025-12-15", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "MCA-32", "name": "Software Engineering", "Date": "2025-12-16", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "MCA-33", "name": "Computer Based Optimization Techniques", "Date": "2025-12-17", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "MCA-05", "name": "Introduction to Machine Learning", "Date": "2025-12-18", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "MCA-07", "name": "Cloud Computing", "Date": "2025-12-19", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bba",
+      "name": "Bachelor of Business Administration",
+      "branches": [
+        {
+          "id": "core",
+          "name": "Core",
+          "semesters": [
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "F010301T (A)", "name": "Management & Cost Accounting", "Date": "2025-12-16", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "F010301T (B)", "name": "Business Law", "Date": "2025-12-16", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "F010302T (A)", "name": "Production Management", "Date": "2025-12-17", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "F010302T (B)", "name": "Business Policy", "Date": "2025-12-18", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "F010303T (A)", "name": "Business Comm.", "Date": "2025-12-19", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "F010303T (B)", "name": "Business Environment", "Date": "2025-12-20", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" }
+              ]
+            },
+            {
+              "id": "5",
+              "subjects": [
+                { "code": "F010501T(A)", "name": "Income Tax", "Date": "2025-12-16", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "F010501T(B)", "name": "Marketing Comm.", "Date": "2025-12-16", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "F010502T(A)", "name": "Entrepreneurship & Small Business Management", "Date": "2025-12-17", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "F010502T(B)", "name": "Sales Management", "Date": "2025-12-18", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "F010503T(A)", "name": "Industrial Relations & Labour Laws", "Date": "2025-12-19", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "F010503T(B)", "name": "Company Accounts", "Date": "2025-12-20", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ba bed",
+      "name": "B.A.B.Ed.",
+      "branches": [
+        {
+          "id": "core",
+          "name": "Core",
+          "semesters": [
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "Sanskrit", "name": "Sanskrit", "Date": "2025-12-15", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "History", "name": "History", "Date": "2025-12-16", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "English", "name": "English", "Date": "2025-12-16", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "Hindi", "name": "Hindi", "Date": "2025-12-16", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "Political Science", "name": "Political Science", "Date": "2025-12-17", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "Economics", "name": "Economics", "Date": "2025-12-17", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "Geography", "name": "Geography", "Date": "2025-12-18", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "Home Science", "name": "Home Science", "Date": "2025-12-18", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "Educational Administration", "name": "Educational Administration", "Date": "2025-12-19", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "Drawing & Painting", "name": "Drawing & Painting", "Date": "2025-12-19", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "Gender School and Society", "name": "Gender School and Society", "Date": "2025-12-20", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" }
+              ]
+            },
+            {
+              "id": "5",
+              "subjects": [
+                { "code": "Sanskrit", "name": "Sanskrit", "Date": "2025-12-15", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "History", "name": "History", "Date": "2025-12-16", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "English", "name": "English", "Date": "2025-12-16", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "Hindi", "name": "Hindi", "Date": "2025-12-16", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "Political Science", "name": "Political Science", "Date": "2025-12-17", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "Economics", "name": "Economics", "Date": "2025-12-17", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "Geography", "name": "Geography", "Date": "2025-12-18", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "Home Science", "name": "Home Science", "Date": "2025-12-18", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "Guidance & Counselling in School", "name": "Guidance & Counselling in School", "Date": "2025-12-19", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "Drawing & Painting", "name": "Drawing & Painting", "Date": "2025-12-19", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "Action Research", "name": "Action Research", "Date": "2025-12-20", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsc bed",
+      "name": "B.Sc.B.Ed.",
+      "branches": [
+        {
+          "id": "core",
+          "name": "Core",
+          "semesters": [
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "Physics/Botany", "name": "Physics/Botany", "Date": "2025-12-16", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "Mathematics / Zoology", "name": "Mathematics / Zoology", "Date": "2025-12-17", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "Chemistry / Computer Sci.", "name": "Chemistry / Computer Sci.", "Date": "2025-12-18", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "Educational Administration", "name": "Educational Administration", "Date": "2025-12-19", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "Gender School and Society", "name": "Gender School and Society", "Date": "2025-12-20", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" }
+              ]
+            },
+            {
+              "id": "5",
+              "subjects": [
+                { "code": "Physics/Botany", "name": "Physics/Botany", "Date": "2025-12-16", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "Mathematics / Zoology", "name": "Mathematics / Zoology", "Date": "2025-12-17", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "Chemistry/Computer Sci.", "name": "Chemistry/Computer Sci.", "Date": "2025-12-18", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "Guidance & Counselling in School", "name": "Guidance & Counselling in School", "Date": "2025-12-19", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "Action Research", "name": "Action Research", "Date": "2025-12-20", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bpharm",
+      "name": "B.Pharm",
+      "branches": [
+        {
+          "id": "core",
+          "name": "Core",
+          "semesters": [
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "BP-301", "name": "Pharmaceutical Organic Chemistry II", "Date": "2025-12-31", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BP-302", "name": "Physical Pharmaceutics 1", "Date": "2025-12-31", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BP-303", "name": "Pharmaceutical Microbiology", "Date": "2026-01-01", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BP-304", "name": "Pharmaceutical Engg.", "Date": "2026-01-02", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            },
+            {
+              "id": "5",
+              "subjects": [
+                { "code": "BP-501", "name": "Medicinal Chemistry-II", "Date": "2025-12-30", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BP-502T", "name": "Industrial Pharmacy-I", "Date": "2025-12-31", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BP-503T", "name": "Pharmacology-II", "Date": "2025-12-31", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BP-504T", "name": "Pharmacognosy and Phytochemistry-II", "Date": "2026-01-01", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BP-505T", "name": "Pharmaceutical Jurisprudence", "Date": "2026-01-02", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" }
+              ]
+            },
+            {
+              "id": "7",
+              "subjects": [
+                { "code": "BP701T", "name": "Instrumental Methods of Analysis", "Date": "2025-12-31", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BP702T", "name": "Industrial Pharmacy-II", "Date": "2025-12-31", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BP703T", "name": "Pharmacy Practice", "Date": "2026-01-01", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BP704T", "name": "Novel Drug Delivery System", "Date": "2026-01-02", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mtech",
+      "name": "M.Tech",
+      "branches": [
+        {
+          "id": "ctm",
+          "name": "Construction Technology & Management",
+          "semesters": [
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "MTCE-031", "name": "Concrete Technology", "Date": "2025-12-22", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "MTOE-032", "name": "Waste to Energy", "Date": "2025-12-23", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "stru",
+          "name": "Structural Engineering",
+          "semesters": [
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "MTSE-031", "name": "Composite Material", "Date": "2025-12-22", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "MTOE-032", "name": "Waste to Energy", "Date": "2025-12-23", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "me",
+          "name": "Mechanical Engineering",
+          "semesters": [
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "MTME-031", "name": "Design of Solar and Wind System", "Date": "2025-12-22", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "MTOE-032", "name": "Waste to Energy", "Date": "2025-12-23", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs",
+          "name": "Computer Science",
+          "semesters": [
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "MTCS-031", "name": "Mobile Applications & Services", "Date": "2025-12-22", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "MTOE-032", "name": "Waste to Energy", "Date": "2025-12-23", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "comm",
+          "name": "Communication",
+          "semesters": [
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "MTEC-031", "name": "High Performance Networks", "Date": "2025-12-22", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "MTOE-032", "name": "Waste to Energy", "Date": "2025-12-23", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ei",
+          "name": "Electronics & Instrumentation",
+          "semesters": [
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "MTEI-031", "name": "Embedded system design", "Date": "2025-12-22", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "MTOE-032", "name": "Waste to Energy", "Date": "2025-12-23", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ee",
+          "name": "Electrical Engineering",
+          "semesters": [
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "MTEE-031", "name": "SCADA Systems and its Applications", "Date": "2025-12-22", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "MTOE-032", "name": "Waste to Energy", "Date": "2025-12-23", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ba llb",
+      "name": "B.A.LL.B.",
+      "branches": [
+        {
+          "id": "core",
+          "name": "Core",
+          "semesters": [
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "BLA301", "name": "Economics-I", "Date": "2025-12-31", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BLA302", "name": "Political Science - III", "Date": "2025-12-31", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BLA303", "name": "Sociology-III", "Date": "2026-01-01", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BLA304", "name": "Computer Education", "Date": "2026-01-02", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" },
+                { "code": "BLA-305", "name": "Constitutional Law-I", "Date": "2026-01-05", "startTime": "01:30 PM", "endTime": "04:30 PM", "shift": "E" }
+              ]
+            },
+            {
+              "id": "5",
+              "subjects": [
+                { "code": "BLA501", "name": "Economics-III", "Date": "2025-12-31", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BLA-502", "name": "History-II", "Date": "2025-12-31", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BLA503", "name": "Jurisprudence", "Date": "2026-01-01", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BLA504", "name": "Family Law-I", "Date": "2026-01-02", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BLA-505", "name": "Public International Law-I", "Date": "2026-01-05", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            },
+            {
+              "id": "7",
+              "subjects": [
+                { "code": "BLA-701", "name": "Administrative Law", "Date": "2025-12-31", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BLA-702", "name": "Revenue Laws", "Date": "2025-12-31", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BLA-703", "name": "Drafting, Pleading and Conveyancing", "Date": "2026-01-01", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BLA-704", "name": "Property Laws", "Date": "2026-01-02", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "BLA705", "name": "Law of Crimes - II", "Date": "2026-01-05", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "llb",
+      "name": "LL.B.",
+      "branches": [
+        {
+          "id": "core",
+          "name": "Core",
+          "semesters": [
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "LA-301", "name": "Muslim Law", "Date": "2025-12-31", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "LA-302", "name": "Transfer of Property Act, Easement Act", "Date": "2026-01-01", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "LA-303", "name": "Criminal Procedure Law", "Date": "2026-01-02", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "LA-304", "name": "Public International Law", "Date": "2026-01-03", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "LA-305", "name": "Drafting of Pleading & Conveyancing", "Date": "2026-01-05", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            },
+            {
+              "id": "5",
+              "subjects": [
+                { "code": "LA-501", "name": "Uttar Pradesh Local Laws", "Date": "2025-12-31", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "LA-502", "name": "Law of Evidence", "Date": "2026-01-01", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "LA-503", "name": "Arbitration, Conciliation & ADR System", "Date": "2026-01-02", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "LA-504", "name": "Interpretation of Statutes", "Date": "2026-01-03", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "LA-505", "name": "Human Rights", "Date": "2026-01-05", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "llm",
+      "name": "LL.M. (Group-B Criminal Law)",
+      "branches": [
+        {
+          "id": "core",
+          "name": "Core",
+          "semesters": [
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "LLM305", "name": "Comparative Criminal Law; U.K., U.S.A. and Indian Practices", "Date": "2025-12-31", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "LLM306", "name": "Penology & Sentencing", "Date": "2025-12-31", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "LLM307", "name": "Drugs Addiction, Criminal Justice and Human Rights", "Date": "2026-01-01", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "med",
+      "name": "M.Ed.",
+      "branches": [
+        {
+          "id": "core",
+          "name": "Core",
+          "semesters": [
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "Paper-I", "name": "Elementary Education", "Date": "2026-01-01", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "Paper-II", "name": "Methodology of Educational Research-II", "Date": "2026-01-02", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "Paper-III", "name": "Teacher Education Issues and challenges", "Date": "2026-01-03", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "Paper-IV", "name": "Preparation of Secondary & Higher Secondary Teachers", "Date": "2026-01-05", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "msc_ag",
+      "name": "M.Sc. (Agriculture)",
+      "branches": [
+        {
+          "id": "agronomy",
+          "name": "Agronomy",
+          "semesters": [
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "AGR-507", "name": "Principles & Practices of Soil Fertility & Nutrient Managem.", "Date": "2026-01-01", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "AGR-508", "name": "Dryland Farming & Watershed Management", "Date": "2026-01-02", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "AGR-509", "name": "Advances in Crop Growth & Productivity", "Date": "2026-01-03", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "horticulture",
+          "name": "Horticulture",
+          "semesters": [
+            {
+              "id": "3",
+              "subjects": [
+                { "code": "HORT-507", "name": "Propagation & Nursery Management of Horti. Crops", "Date": "2026-01-01", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "HORT-508", "name": "Production Technology of Plantation Medicinal, Aromatic & Species Crops", "Date": "2026-01-02", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" },
+                { "code": "HORT-509", "name": "Breeding of Horticulture Crops", "Date": "2026-01-03", "startTime": "09:30 AM", "endTime": "12:30 PM", "shift": "M" }
               ]
             }
           ]

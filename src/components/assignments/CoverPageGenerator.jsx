@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { PDFDocument, StandardFonts, rgb } from "pdf-lib";
 import "./CoverPageGenerator.css";
 import jsLogo from "./jsimg.jpg";
+import { FaExternalLinkAlt } from "react-icons/fa";
+
 
 // utils
 const savePdfToFile = (pdfBytes, fileName) => {
@@ -491,7 +493,7 @@ export default function Assignments() {
     
     
       <div className=" header-bar py-5 flex flex-col justify-center items-center mb-4 gap-2  border-b border-gray-900 mt-3">
-        <p className="text-2xl font-bold">JS Front Page Generator</p>
+        <p className="text-2xl font-bold">JSU Front Page Generator</p>
         <p className="uppercase text-gray-500 mb-5 text-sm lg:text-md">
           Generate frontpage and download pdf
         </p>
@@ -663,6 +665,15 @@ export default function Assignments() {
         </div>
       </div>
     </div>
+    <div className="w-full lg:w-full flex justify-center items-center mt-10 pb-5  hover:scale-105 transition-all ">
+                                            <a
+                      href="https://www.instagram.com/jsulabs"
+                      className=" flex  justify-center w-full  p-1  rounded-xl text-gray-800 font-semibold tracking-wide hover:text-blue-400 text-gray-500 transition text-sm"
+                    >
+                      Built by @JsuLabs <span className="px-2 flex  justify-center items-center "><FaExternalLinkAlt />
+</span>
+                    </a>
+                                        </div>
     </div>
   );
 }

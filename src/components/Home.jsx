@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import examData from "../data/datesheet.json";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -66,17 +67,17 @@ const Home = () => {
   return (
     <div className="flex flex-col lg:flex-row h-screen w-screen bg-gray-950 text-white p-2 lg:p-10 ">
       <div className="lg:absolute flex flex-col justify-center items-center mb-4  gap-2 w-full lg:w-[90%] border-b border-gray-900 lg:m-0 mt-3">
-        <p className="text-2xl font-bold">JS Exam Time Table</p>
+        <p className="text-2xl font-bold">JSU Exam Time Table</p>
         <p className="uppercase text-gray-500 mb-5 text-sm lg:text-md">
           Odd Semster examination 2025-2026
         </p>
       </div>
 
-      {/* LEFT SIDE – COURSE SELECT */}
-      <div className="flex flex-col gap-4 w-full lg:w-[28%] items-center justify-center lg:pt-10 px-4 ">
+      {/* LEFT COURSE SELECT */}
+      <div className="flex flex-col gap-4 w-full lg:w-[50%] items-center justify-center lg:pt-30 px-4  ">
         <h1 className="text-2xl font-bold mb-2">Select Your Course</h1>
 
-        <div className="grid grid-cols-2 gap-4 w-full max-w-sm">
+        <div className="grid grid-cols-2 lg:grid-cols-3  gap-4 w-full max-w-sm">
           {examData.courses.map((c, index) => (
             <motion.button
               key={index}
@@ -89,9 +90,10 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: index * 0.12 }}
               className={`p-4 rounded-xl text-lg font-semibold transition 
-                ${course === c.id
-                  ? "bg-blue-600"
-                  : "bg-gray-800 hover:bg-gray-700 shine-btn"
+                ${
+                  course === c.id
+                    ? "bg-blue-600"
+                    : "bg-gray-800 hover:bg-gray-700 shine-btn"
                 }`}
             >
               {c.id.toUpperCase()}
@@ -120,10 +122,11 @@ const Home = () => {
                     setSem("");
                   }}
                   className={`p-3 rounded-lg text-lg transition 
-                  ${branch === b.id
+                  ${
+                    branch === b.id
                       ? "bg-blue-600"
                       : "bg-gray-800 hover:bg-gray-700 shine-btn"
-                    }`}
+                  }`}
                 >
                   {b.id}
                 </button>
@@ -151,6 +154,17 @@ const Home = () => {
           )}
         </div>
       )}
+      <div className="w-full lg:w-[80%] flex justify-center items-center mt-10 pb-5 lg:hidden hover:scale-105 transition-all ">
+        <a
+          href="https://www.instagram.com/jsulabs"
+          className=" flex  justify-center w-full  p-1  rounded-xl text-gray-800 font-semibold tracking-wide hover:text-blue-400 text-gray-500 transition text-sm"
+        >
+          Built by @JsuLabs{" "}
+          <span className="px-2 flex  justify-center items-center ">
+            <FaExternalLinkAlt />
+          </span>
+        </a>
+      </div>
     </div>
   );
 };
