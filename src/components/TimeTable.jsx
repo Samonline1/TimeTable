@@ -170,7 +170,7 @@ const TimeTable = () => {
                                             </p>
 
                                             <div className="text-center space-y-1">
-                                                <h1 className="text-xl font-bold">{subject.code}</h1>
+                                                <h1 className="text-xl overflow-x-auto font-bold overflow-y-hidden">{subject.code}</h1>
                                                 <p className="text-gray-300">{subject.name}</p>
 
                                                 <div className="flex justify-center gap-2 text-gray-400 text-lg">

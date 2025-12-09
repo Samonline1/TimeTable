@@ -3,6 +3,7 @@ import Home from "./components/Home.jsx";
 import TimeTable from "./components/TimeTable.jsx";
 import History from "./components/History.jsx";
 import Assignment from "./components/assignments/Assignment.jsx";
+import NotFound from "./components/NotFound.jsx";
 
 
 const router = createBrowserRouter([
@@ -35,6 +36,11 @@ const router = createBrowserRouter([
       <Assignment />
     </div>,
   },
+  {
+    path: "*",
+    element: 
+      <NotFound />
+  }
 ]);
 
 export default function App() {
